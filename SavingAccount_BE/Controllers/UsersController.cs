@@ -1,0 +1,52 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using SavingAccount_BE.Service.Users.Cards;
+using SavingAccount_BE.Service.Users.Histories;
+
+namespace SavingAccount_BE.Controllers
+{
+    [Route("api/user")]
+    [ApiController]
+    public class UsersController : ControllerBase
+    {
+        private readonly IUserCard _userCardService;
+        private readonly IUserHistory _userHistoryService;
+
+        public UsersController(IUserCard userCardService,IUserHistory userHistory)
+        {
+            _userCardService = userCardService;
+            _userHistoryService = userHistory;
+        }
+
+        [HttpGet("Wallet")]
+        public IActionResult GetListCards([FromQuery] string userId)
+        {
+            return Ok(_userCardService.GetListCards(userId));
+        }
+
+        [HttpGet("History")]
+        public IActionResult GetListHistory([FromQuery] string userId)
+        {
+            return Ok(_userHistoryService.GetHistory(userId));
+        }
+
+
+        // POST api/<ValuesController>
+        [HttpPost]
+        public void Post([FromBody] string value)
+        {
+        }
+
+        // PUT api/<ValuesController>/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
+        {
+        }
+
+        // DELETE api/<ValuesController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
+    }
+}
