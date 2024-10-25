@@ -13,12 +13,22 @@ namespace SavingAccount_BE.Service.Users.Cards
         }
         public List<Card> GetListCards(string userId)
         {
-            var user = _dbContext.Users.FirstOrDefault(u => u.Id == userId);
-            if (user == null || string.IsNullOrEmpty(user.IdCard))
+            var user = _dbContext.Users.Where(u => u.IdUser == userId);
+            bool checkCardValid = _dbContext.UserCards
+                .Where(uc => user.Select(u => u.IdUser).Contains(uc.IdUser))
+                .Any();
+            if (user == null && checkCardValid)
             {
                 return new List<Card>();
             }
-            var cards = _dbContext.Cards.Where(c => c.IdCard == user.IdCard).ToList();
+            var cardIds = _dbContext.UserCards
+                           .Where(uc => uc.IdUser == userId)
+                           .Select(uc => uc.IdCard)
+                           .Distinct()
+                           .ToList();
+            var cards = _dbContext.Cards
+                            .Where(c => cardIds.Contains(c.IdCard))
+                            .ToList();
             return cards;
         }
     }

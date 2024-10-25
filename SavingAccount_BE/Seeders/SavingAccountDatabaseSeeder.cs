@@ -1,16 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SavingAccount_BE.Model;
 
-namespace SavingAccount_BE.Seeders
+public static class SavingAccountDatabaseSeeder
 {
-    public static class SavingAccountDatabaseSeeder
+    public static void SeedSavingAccount(this ModelBuilder modelBuilder)
     {
-        public static void SeedSavingAccount(this ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<SavingAccount>().HasData(
-                new SavingAccount() { IdSavingAccount = "1", DateOpened = new DateTime(2022,08,08),Balance = 300000,NameOfSavingAccount="VKT",IdHistory="2",Term="3 months"},
-                new SavingAccount() { IdSavingAccount = "2", DateOpened = new DateTime(2022,09,09), Balance = 500000, NameOfSavingAccount = "LPT", IdHistory = "4", Term = "6 months" }
-                );
-        }
+        modelBuilder.Entity<SavingAccount>().HasData(
+            new SavingAccount() { IdSavingAccount = "1", DateOpened = new DateTime(2022, 08, 08), Balance = 300000, NameOfSavingAccount = "VKT", Term = "3 months" },
+            new SavingAccount() { IdSavingAccount = "2", DateOpened = new DateTime(2022, 09, 09), Balance = 500000, NameOfSavingAccount = "VKT", Term = "6 months" },
+            new SavingAccount() { IdSavingAccount = "3", DateOpened = new DateTime(2022, 09, 09), Balance = 500000, NameOfSavingAccount = "LPT", Term = "6 months" }
+        );
+
+        modelBuilder.Entity<SavingAccountHistory>().HasData(
+            new SavingAccountHistory() { Id = 1, IdSavingAccount = "1", IdHistory = "2" },
+            new SavingAccountHistory() { Id = 2, IdSavingAccount = "1", IdHistory = "5" },
+            new SavingAccountHistory() { Id = 3, IdSavingAccount = "1", IdHistory = "6" },
+            new SavingAccountHistory() { Id = 4, IdSavingAccount = "2", IdHistory = "4" },
+            new SavingAccountHistory() { Id = 5, IdSavingAccount = "3", IdHistory = "10"}
+        );
     }
 }

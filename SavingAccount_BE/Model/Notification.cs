@@ -5,6 +5,6 @@
         public string IdNotification { get; set; }
         public string Content { get; set; }
 
-        public ICollection<User> Users { get; set; }
+        public ICollection<UserNotification> userNotifications { get; set; }
     }
 }

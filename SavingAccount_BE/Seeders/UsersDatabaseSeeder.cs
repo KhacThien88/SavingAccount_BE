@@ -1,17 +1,71 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SavingAccount_BE.Model;
-using System.Runtime.CompilerServices;
 
 namespace SavingAccount_BE.Seeders
 {
-    public static class UsersDatabaseSeeder
+    public static class UserDatabaseSeeder
     {
         public static void SeedUser(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasData(
-                new User() { Id = "1",IdCard="1",IdSavingAccount="1",IdNotification="1",FullName = "Vo Khac Thien",CCCD="215913523" , Email = "KTeightop1512@gmail.com", PhoneNumber = "0905647832", PasswordHash = "$2y$10$KBvSdRCHLCo6DHHq5kSiiemIOFbKVAQMVeZr5ulfAPiWpQtSeAYD2", Province = "Binh Dinh", City = "Quy Nhon", Nation = "Viet Nam" },
-                new User() { Id = "2", IdCard = "2", IdSavingAccount="2", IdNotification = "2", FullName = "Le Phuc Thuan", CCCD = "215913524", Email = "lephucthuan8@gmail.com", PhoneNumber = "113", PasswordHash = "$2y$10$KBvSdRCHLCo6DHHq5kSiiemIOFbKVAQMVeZr5ulfAPiWpQtSeAYD2", Province = "Quang Ngai", City = "Quang Ngai", Nation = "Viet Nam" }
+            // Seed dữ liệu cho User
+           modelBuilder.Entity<User>().HasData(
+                new User() 
+                    { 
+                        IdUser = "1", 
+                        FullName = "John Doe", 
+                        Email = "john@example.com", 
+                        PhoneNumber = "1234567890", 
+                        CCCD = "001", 
+                        PasswordHash = "password123",
+                        City = "Hà Nội",
+                        Province = "Hà Nội",
+                        Nation = "Việt Nam",
+                        SecurityStampHash = "abc123",
+                        BirthDate = new DateTime(1990, 1, 1),
+                        AccessFailedCount = 0,
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        TwoFactorEndable = false,
+                        LockoutEndable = false
+                    },
+                    new User() 
+                    { 
+                        IdUser = "2", 
+                        FullName = "Jane Smith", 
+                        Email = "jane@example.com", 
+                        PhoneNumber = "0987654321", 
+                        CCCD = "002", 
+                        PasswordHash = "password456",
+                        City = "Hồ Chí Minh",
+                        Province = "Hồ Chí Minh",
+                        Nation = "Việt Nam",
+                        SecurityStampHash = "xyz456",
+                        BirthDate = new DateTime(1992, 5, 20),
+                        AccessFailedCount = 0,
+                        EmailConfirmed = true,
+                        PhoneNumberConfirmed = true,
+                        TwoFactorEndable = false,
+                        LockoutEndable = false
+                    }
+                );
+
+
+            modelBuilder.Entity<UserSavingAccount>().HasData(
+                new UserSavingAccount() { Id = 1, IdUser = "1", IdSavingAccount = "1" },
+                new UserSavingAccount() { Id = 2, IdUser = "2", IdSavingAccount = "2" }
             );
+
+            modelBuilder.Entity<UserCard>().HasData(
+                new UserCard() { Id = 1, IdUser = "1", IdCard = "1" },
+                new UserCard() { Id = 2, IdUser = "2", IdCard = "2" },
+                new UserCard() { Id = 3, IdUser = "1", IdCard = "3" }
+            );
+
+            modelBuilder.Entity<UserNotification>().HasData(
+                new UserNotification { Id = 1, IdUser = "1", IdNotification = "1" },
+                new UserNotification { Id = 2, IdUser = "2", IdNotification = "2" }
+);
+
         }
     }
 }

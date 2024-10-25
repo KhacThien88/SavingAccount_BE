@@ -9,7 +9,7 @@ namespace SavingAccount_BE.Configuration
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("User");
-            builder.HasKey(t => t.Id);
+            builder.HasKey(t => t.IdUser);
             builder.Property(t => t.CCCD).IsRequired();
             builder.Property(t => t.FullName).IsRequired();
             builder.Property(t => t.Email).IsRequired();

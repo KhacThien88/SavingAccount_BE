@@ -17,14 +17,11 @@ namespace SavingAccount_BE.Data
             modelBuilder.ApplyConfiguration(new CardConfiguration());
             modelBuilder.ApplyConfiguration(new SavingAccountConfiguration());
             modelBuilder.ApplyConfiguration(new NotificationConfiguration());
-            
-            modelBuilder.Entity<Card>().HasOne(c => c.History).WithMany(h => h.Cards).HasForeignKey(c => c.IdHistory);
-            modelBuilder.Entity<SavingAccount>().HasOne(sa => sa.History).WithMany(h => h.SavingAccounts).HasForeignKey(sa => sa.IdHistory);
-            modelBuilder.Entity<SavingAccount>().HasKey(c => c.IdSavingAccount);
-            modelBuilder.Entity<User>().HasOne(u => u.Card).WithMany(c => c.Users).HasForeignKey(u => u.IdCard);
-            modelBuilder.Entity<User>().HasOne(u => u.SavingAccount).WithMany(sa => sa.Users).HasForeignKey(u => u.IdSavingAccount);
-            modelBuilder.Entity<User>().HasOne(u => u.Notification).WithMany(n => n.Users).HasForeignKey(u => u.IdNotification);
-            modelBuilder.Entity<User>().HasOne(u => u.Users).WithMany(u => u.Relatives).HasForeignKey(u => u.Friend).HasPrincipalKey(u => u.Email);
+            modelBuilder.ApplyConfiguration(new CardHistoryConfiguration());
+            modelBuilder.ApplyConfiguration(new SavingAccountHistoryConfiguration());
+            modelBuilder.ApplyConfiguration(new UserCardConfiguration());
+            modelBuilder.ApplyConfiguration(new UserSavingAccountConfiguration());
+            modelBuilder.ApplyConfiguration(new UserNotificationConfiguration());
 
             modelBuilder.SeedHistory();
             modelBuilder.SeedSavingAccount();
@@ -38,6 +35,16 @@ namespace SavingAccount_BE.Data
         public DbSet<History> Histories { get; set; }
         public DbSet<Notification> Notifications{ get; set; }
         public DbSet<SavingAccount> SavingAccounts { get; set; }
+
+        public DbSet<SavingAccountHistory> SavingAccountsHistory { get; set; }
+
+        public DbSet<CardHistory> CardHistories { get; set; }
+
+        public DbSet<UserSavingAccount> UserSavingAccounts { get; set; }
+
+        public DbSet<UserCard> UserCards { get; set; }
+
+        public DbSet<UserNotification> UserNotifications { get; set; }
 
     }
 }
