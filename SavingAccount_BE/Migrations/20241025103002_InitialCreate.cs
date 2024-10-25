@@ -64,7 +64,9 @@ namespace SavingAccount_BE.Migrations
                     NameOfSavingAccount = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Term = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Balance = table.Column<double>(type: "float", nullable: false),
-                    DateOpened = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateOpened = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Withdraw = table.Column<double>(type: "float", nullable: false, defaultValue: 0.0),
+                    Deposits = table.Column<double>(type: "float", nullable: false, defaultValue: 0.0)
                 },
                 constraints: table =>
                 {

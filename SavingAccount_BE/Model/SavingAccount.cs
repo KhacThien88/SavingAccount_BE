@@ -7,6 +7,10 @@
         public string Term { get; set; }
         public double Balance { get; set; }
         public DateTime DateOpened { get; set; }
+    
+        public double Withdraw {  get; set; }
+
+        public double Deposits { get; set; }
 
         public ICollection<SavingAccountHistory> SavingAccountHistories { get; set; }
 

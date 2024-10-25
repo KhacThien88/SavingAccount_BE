@@ -30,6 +30,30 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
             var listSavingAccount = _dbContext.SavingAccounts
                 .Where(sa => listSavingAccountIds.Contains(sa.IdSavingAccount))
                 .ToList();
+
+            foreach (var savingAccount in listSavingAccount)
+            {
+                var savingAccountHistories = _dbContext.SavingAccountsHistory
+                    .Where(sah => sah.IdSavingAccount == savingAccount.IdSavingAccount)
+                    .Select(sah => sah.History);
+
+                double totalDeposits = 0;
+                double totalWithdraws = 0;
+
+                foreach (var history in savingAccountHistories)
+                {
+                    if (history.Change > 0)
+                    {
+                        totalDeposits += history.Change;
+                    }
+                    else if (history.Change < 0)
+                    {
+                        totalWithdraws += Math.Abs(history.Change);
+                    }
+                }
+                savingAccount.Deposits = totalDeposits;
+                savingAccount.Withdraw = totalWithdraws;
+            }
             return listSavingAccount;
         }
     }

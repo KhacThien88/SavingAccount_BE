@@ -12,7 +12,7 @@ using SavingAccount_BE.Data;
 namespace SavingAccount_BE.Migrations
 {
     [DbContext(typeof(SavingAccountDbContext))]
-    [Migration("20241025095809_InitialCreate")]
+    [Migration("20241025103002_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -272,6 +272,11 @@ namespace SavingAccount_BE.Migrations
                     b.Property<DateTime>("DateOpened")
                         .HasColumnType("datetime2");
 
+                    b.Property<double>("Deposits")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0);
+
                     b.Property<string>("NameOfSavingAccount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -279,6 +284,11 @@ namespace SavingAccount_BE.Migrations
                     b.Property<string>("Term")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Withdraw")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0);
 
                     b.HasKey("IdSavingAccount");
 
@@ -290,24 +300,30 @@ namespace SavingAccount_BE.Migrations
                             IdSavingAccount = "1",
                             Balance = 300000.0,
                             DateOpened = new DateTime(2022, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deposits = 0.0,
                             NameOfSavingAccount = "VKT",
-                            Term = "3 months"
+                            Term = "3 months",
+                            Withdraw = 0.0
                         },
                         new
                         {
                             IdSavingAccount = "2",
                             Balance = 500000.0,
                             DateOpened = new DateTime(2022, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deposits = 0.0,
                             NameOfSavingAccount = "VKT",
-                            Term = "6 months"
+                            Term = "6 months",
+                            Withdraw = 0.0
                         },
                         new
                         {
                             IdSavingAccount = "3",
                             Balance = 500000.0,
                             DateOpened = new DateTime(2022, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Deposits = 0.0,
                             NameOfSavingAccount = "LPT",
-                            Term = "6 months"
+                            Term = "6 months",
+                            Withdraw = 0.0
                         });
                 });
 

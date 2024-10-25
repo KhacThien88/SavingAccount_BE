@@ -14,6 +14,8 @@ namespace SavingAccount_BE.Configuration
             builder.Property(t => t.Balance).IsRequired();
             builder.Property(t => t.NameOfSavingAccount).IsRequired();
             builder.Property(t => t.DateOpened).IsRequired();
+            builder.Property(t => t.Deposits).IsRequired().HasDefaultValue(0);
+            builder.Property(t => t.Withdraw).IsRequired().HasDefaultValue(0);
         }
     }
 }
