@@ -611,6 +611,12 @@ namespace SavingAccount_BE.Migrations
                         {
                             Id = 2,
                             IdSavingAccount = "2",
+                            IdUser = "1"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IdSavingAccount = "3",
                             IdUser = "2"
                         });
                 });

@@ -52,7 +52,8 @@ namespace SavingAccount_BE.Seeders
 
             modelBuilder.Entity<UserSavingAccount>().HasData(
                 new UserSavingAccount() { Id = 1, IdUser = "1", IdSavingAccount = "1" },
-                new UserSavingAccount() { Id = 2, IdUser = "2", IdSavingAccount = "2" }
+                new UserSavingAccount() { Id = 2, IdUser = "1", IdSavingAccount = "2" },
+                new UserSavingAccount() { Id = 3, IdUser = "2", IdSavingAccount = "3" }
             );
 
             modelBuilder.Entity<UserCard>().HasData(

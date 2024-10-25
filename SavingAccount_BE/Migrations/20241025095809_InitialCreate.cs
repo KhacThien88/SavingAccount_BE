@@ -339,7 +339,8 @@ namespace SavingAccount_BE.Migrations
                 values: new object[,]
                 {
                     { 1, "1", "1" },
-                    { 2, "2", "2" }
+                    { 2, "2", "1" },
+                    { 3, "3", "2" }
                 });
 
             migrationBuilder.CreateIndex(

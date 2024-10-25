@@ -13,10 +13,11 @@ namespace SavingAccount_BE.Controllers
         private readonly IUserCard _userCardService;
         private readonly IUserHistory _userHistoryService;
         private readonly IUserSavingAccountService _userSavingAccountService;
-        public UsersController(IUserCard userCardService,IUserHistory userHistory)
+        public UsersController(IUserCard userCardService,IUserHistory userHistory, IUserSavingAccountService userSavingAccountService)
         {
             _userCardService = userCardService;
             _userHistoryService = userHistory;
+            _userSavingAccountService = userSavingAccountService;
         }
 
         [HttpGet("Wallet")]
@@ -34,7 +35,7 @@ namespace SavingAccount_BE.Controllers
         [HttpGet("ListSavingAccounts")]
         public IActionResult GetListSavingAccounts([FromQuery] string userId)
         {
-            return Ok(_userHistoryService.GetHistory(userId));
+            return Ok(_userSavingAccountService.GetListSavingAccounts(userId));
         }
 
 
