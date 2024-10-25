@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using SavingAccount_BE.Service.Users.Cards;
 using SavingAccount_BE.Service.Users.Histories;
+using SavingAccount_BE.Service.Users.SavingAccounts;
 
 namespace SavingAccount_BE.Controllers
 {
@@ -11,7 +12,7 @@ namespace SavingAccount_BE.Controllers
     {
         private readonly IUserCard _userCardService;
         private readonly IUserHistory _userHistoryService;
-
+        private readonly IUserSavingAccountService _userSavingAccountService;
         public UsersController(IUserCard userCardService,IUserHistory userHistory)
         {
             _userCardService = userCardService;
@@ -26,6 +27,12 @@ namespace SavingAccount_BE.Controllers
 
         [HttpGet("History")]
         public IActionResult GetListHistory([FromQuery] string userId)
+        {
+            return Ok(_userHistoryService.GetHistory(userId));
+        }
+
+        [HttpGet("ListSavingAccounts")]
+        public IActionResult GetListSavingAccounts([FromQuery] string userId)
         {
             return Ok(_userHistoryService.GetHistory(userId));
         }
