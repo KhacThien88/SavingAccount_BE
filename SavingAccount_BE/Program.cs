@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using SavingAccount_BE.Data;
 using SavingAccount_BE.Service.Users.Cards;
 using SavingAccount_BE.Service.Users.Histories;
+using SavingAccount_BE.Service.Users.Profile;
 using SavingAccount_BE.Service.Users.SavingAccounts;
 using System.Text.Json.Serialization;
 
@@ -23,6 +24,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IUserCard,UserCard>();
 builder.Services.AddTransient<IUserHistory, UserHistory>();
 builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountService>();
+builder.Services.AddTransient<IUserProfile ,UserProfile>();
 builder.Services.AddDbContext<SavingAccountDbContext>(
     option =>
     {

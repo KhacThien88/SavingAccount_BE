@@ -25,7 +25,6 @@
   <ItemGroup>
     <Folder Include="Service\Admin\" />
     <Folder Include="Service\Users\MonthReport\" />
-    <Folder Include="Service\Users\Profile\" />
   </ItemGroup>
 
 </Project>
