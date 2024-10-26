@@ -13,10 +13,12 @@ namespace SavingAccount_BE.Service.Accounts
         public readonly UserManager<ApplicationUser> _userManager;
         public readonly SignInManager<ApplicationUser> _signInManager;
         public readonly IConfiguration _configuration;
-        public AccountService(UserManager<ApplicationUser> userManager , SignInManager<ApplicationUser> signInManager , IConfiguration configuration) { 
+        private readonly SavingAccountDbContext _dbContext;
+        public AccountService(UserManager<ApplicationUser> userManager , SignInManager<ApplicationUser> signInManager , IConfiguration configuration, SavingAccountDbContext dbContext) { 
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
+            _dbContext = dbContext;
         }
         public async Task<string> SignInAsync(SignInModel model)
         {
@@ -26,7 +28,8 @@ namespace SavingAccount_BE.Service.Accounts
             }
             var user = await _userManager.FindByEmailAsync(model.Email);
             var userRoles = await _userManager.GetRolesAsync(user);
-            var authClaims = new List<Claim> { 
+            var authClaims = new List<Claim> {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                 new Claim(ClaimTypes.Email , model.Email),
                 new Claim(JwtRegisteredClaimNames.Jti , Guid.NewGuid().ToString()),
             };
@@ -47,11 +50,18 @@ namespace SavingAccount_BE.Service.Accounts
         {
             var user = new ApplicationUser
             {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
+                FullName = model.FullName,
                 Email = model.Email,
-                UserName = model.Email
+                UserName = model.Email,
+                BirthDate = model.BirthDate,
+                Address = model.Address,
+                City = model.City,
+                Province = model.Province,
+                Nation = model.Nation,
+                PhoneNumber = model.PhoneNumber,
+                PasswordHash = model.Password,
             };
+
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)
@@ -60,12 +70,16 @@ namespace SavingAccount_BE.Service.Accounts
                 {
                     Console.WriteLine($"Error: {error.Description}");
                 }
+                return result;
             }
-            else
-            {
-                await _userManager.AddToRoleAsync(user, "User");
-            }
+            await _userManager.AddToRoleAsync(user, "User");
 
+            _dbContext.Users.Add(new User
+            {
+                IdUser = user.Id,
+            });
+
+            await _dbContext.SaveChangesAsync();
             return result;
         }
 

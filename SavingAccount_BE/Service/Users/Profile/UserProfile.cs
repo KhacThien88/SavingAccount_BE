@@ -12,33 +12,28 @@ namespace SavingAccount_BE.Service.Users.Profile
             _dbContext = dbContext;
         }
 
-        public User GetProfile(string id)
+        public ApplicationUser GetProfile(string id)
         {
-            var user = _dbContext.Users.FirstOrDefault(u => u.IdUser == id);
+            var user = _dbContext.ApplicationUsers.FirstOrDefault(u => u.Id == id);
             if (user == null) { 
-                return new User();
+                return new ApplicationUser();
             }
             return user;
 
         }
         public bool updateProfile(string id, UserDTO updatedUser)
         {
-            var user = _dbContext.Users.FirstOrDefault(u => u.IdUser == id);
+            var user = _dbContext.ApplicationUsers.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
                 return false;
             }
             if (!string.IsNullOrEmpty(updatedUser.FullName)) user.FullName = updatedUser.FullName;
-            if (!string.IsNullOrEmpty(updatedUser.Email)) user.Email = updatedUser.Email;
             if (!string.IsNullOrEmpty(updatedUser.PhoneNumber)) user.PhoneNumber = updatedUser.PhoneNumber;
             if (updatedUser.BirthDate.HasValue) user.BirthDate = updatedUser.BirthDate.Value;
             if (!string.IsNullOrEmpty(updatedUser.Province)) user.Province = updatedUser.Province;
             if (!string.IsNullOrEmpty(updatedUser.City)) user.City = updatedUser.City;
             if (!string.IsNullOrEmpty(updatedUser.Nation)) user.Nation = updatedUser.Nation;
-            if (!string.IsNullOrEmpty(updatedUser.PasswordHash)) user.PasswordHash = updatedUser.PasswordHash;
-            if (!string.IsNullOrEmpty(updatedUser.SecurityStampHash)) user.SecurityStampHash = updatedUser.SecurityStampHash;
-            if (updatedUser.TwoFactorEndable.HasValue) user.TwoFactorEndable = updatedUser.TwoFactorEndable.Value;
-            if (updatedUser.LockoutEndable.HasValue) user.LockoutEndable = updatedUser.LockoutEndable.Value;
             if (!string.IsNullOrEmpty(updatedUser.Base64Image)) user.Base64Image = updatedUser.Base64Image;
 
             try

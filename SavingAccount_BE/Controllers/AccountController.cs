@@ -28,7 +28,7 @@ namespace SavingAccount_BE.Controllers
 
             return BadRequest(result.Errors);
         }
-
+        [AllowAnonymous]
         [HttpPost("SignIn")]
         public async Task<IActionResult> SignIn(SignInModel signInModel)
         {

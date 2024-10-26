@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SavingAccount_BE.Data;
+using SavingAccount_BE.Model;
 using SavingAccount_BE.Seeders;
 using SavingAccount_BE.Service.Accounts;
 using SavingAccount_BE.Service.Users.Cards;
@@ -57,7 +58,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.AddTransient<IUserCard,UserCard>();
+builder.Services.AddTransient<IUserCard, UserCardService>();
 builder.Services.AddTransient<IUserHistory, UserHistory>();
 builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountService>();
 builder.Services.AddTransient<IUserProfile ,UserProfile>();

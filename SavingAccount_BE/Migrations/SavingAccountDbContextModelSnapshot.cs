@@ -163,6 +163,20 @@ namespace SavingAccount_BE.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Base64Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -174,11 +188,7 @@ namespace SavingAccount_BE.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -187,6 +197,10 @@ namespace SavingAccount_BE.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Nation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -204,6 +218,10 @@ namespace SavingAccount_BE.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Province")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -257,35 +275,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasKey("IdCard");
 
                     b.ToTable("Card", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            IdCard = "1",
-                            Balance = 1000.0,
-                            CardNumber = "123456",
-                            DateOpened = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NameOfCard = "Visa",
-                            TypeCard = "Credit"
-                        },
-                        new
-                        {
-                            IdCard = "2",
-                            Balance = 5000.0,
-                            CardNumber = "789012",
-                            DateOpened = new DateTime(2022, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NameOfCard = "MasterCard",
-                            TypeCard = "Debit"
-                        },
-                        new
-                        {
-                            IdCard = "3",
-                            Balance = 5000.0,
-                            CardNumber = "789045",
-                            DateOpened = new DateTime(2022, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            NameOfCard = "The Ghi No",
-                            TypeCard = "Debit"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.CardHistory", b =>
@@ -311,32 +300,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasIndex("IdHistory");
 
                     b.ToTable("CardHistory", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IdCard = "1",
-                            IdHistory = "7"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IdCard = "1",
-                            IdHistory = "8"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            IdCard = "2",
-                            IdHistory = "9"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            IdCard = "3",
-                            IdHistory = "11"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.History", b =>
@@ -357,85 +320,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasKey("IdHistory");
 
                     b.ToTable("History", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            IdHistory = "1",
-                            Change = 300.0,
-                            DateTransfer = new DateTime(2024, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "2",
-                            Change = -200.0,
-                            DateTransfer = new DateTime(2024, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "3",
-                            Change = 500.0,
-                            DateTransfer = new DateTime(2024, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "4",
-                            Change = 300.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "5",
-                            Change = -300.0,
-                            DateTransfer = new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "6",
-                            Change = 800.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "7",
-                            Change = 800.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "8",
-                            Change = 800.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "9",
-                            Change = -800.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "10",
-                            Change = -800.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        },
-                        new
-                        {
-                            IdHistory = "11",
-                            Change = -800.0,
-                            DateTransfer = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Note = "Transfer"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.Notification", b =>
@@ -450,18 +334,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasKey("IdNotification");
 
                     b.ToTable("Notification", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            IdNotification = "1",
-                            Content = "Content1"
-                        },
-                        new
-                        {
-                            IdNotification = "2",
-                            Content = "Content2"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.SavingAccount", b =>
@@ -496,38 +368,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasKey("IdSavingAccount");
 
                     b.ToTable("SavingAccount", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            IdSavingAccount = "1",
-                            Balance = 300000.0,
-                            DateOpened = new DateTime(2022, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Deposits = 0.0,
-                            NameOfSavingAccount = "VKT",
-                            Term = "3 months",
-                            Withdraw = 0.0
-                        },
-                        new
-                        {
-                            IdSavingAccount = "2",
-                            Balance = 500000.0,
-                            DateOpened = new DateTime(2022, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Deposits = 0.0,
-                            NameOfSavingAccount = "VKT",
-                            Term = "6 months",
-                            Withdraw = 0.0
-                        },
-                        new
-                        {
-                            IdSavingAccount = "3",
-                            Balance = 500000.0,
-                            DateOpened = new DateTime(2022, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Deposits = 0.0,
-                            NameOfSavingAccount = "LPT",
-                            Term = "6 months",
-                            Withdraw = 0.0
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.SavingAccountHistory", b =>
@@ -553,116 +393,12 @@ namespace SavingAccount_BE.Migrations
                     b.HasIndex("IdSavingAccount");
 
                     b.ToTable("SavingAccountHistory", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IdHistory = "2",
-                            IdSavingAccount = "1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IdHistory = "5",
-                            IdSavingAccount = "1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            IdHistory = "6",
-                            IdSavingAccount = "1"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            IdHistory = "4",
-                            IdSavingAccount = "2"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            IdHistory = "10",
-                            IdSavingAccount = "3"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.User", b =>
                 {
                     b.Property<string>("IdUser")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
-
-                    b.Property<string>("Base64Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CCCD")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<string>("Friend")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("LockoutEndable")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<string>("Nation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(true);
-
-                    b.Property<string>("Province")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecurityStampHash")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue(" ");
-
-                    b.Property<bool>("TwoFactorEndable")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
 
                     b.Property<string>("UserIdUser")
                         .HasColumnType("nvarchar(450)");
@@ -672,46 +408,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasIndex("UserIdUser");
 
                     b.ToTable("User", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            IdUser = "1",
-                            AccessFailedCount = 0,
-                            BirthDate = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CCCD = "001",
-                            City = "Hà Nội",
-                            Email = "john@example.com",
-                            EmailConfirmed = true,
-                            FullName = "John Doe",
-                            LockoutEndable = false,
-                            Nation = "Việt Nam",
-                            PasswordHash = "$2a$10$B4BKHIe7D5aVXyceF8fmx.hq/akO3kqqEWHJ9mCQnrPi5P7HhMO7G",
-                            PhoneNumber = "1234567890",
-                            PhoneNumberConfirmed = true,
-                            Province = "Hà Nội",
-                            SecurityStampHash = "abc123",
-                            TwoFactorEndable = false
-                        },
-                        new
-                        {
-                            IdUser = "2",
-                            AccessFailedCount = 0,
-                            BirthDate = new DateTime(1992, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CCCD = "002",
-                            City = "Hồ Chí Minh",
-                            Email = "jane@example.com",
-                            EmailConfirmed = true,
-                            FullName = "Jane Smith",
-                            LockoutEndable = false,
-                            Nation = "Việt Nam",
-                            PasswordHash = "$2a$10$B4BKHIe7D5aVXyceF8fmx.hq/akO3kqqEWHJ9mCQnrPi5P7HhMO7G",
-                            PhoneNumber = "0987654321",
-                            PhoneNumberConfirmed = true,
-                            Province = "Hồ Chí Minh",
-                            SecurityStampHash = "xyz456",
-                            TwoFactorEndable = false
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.UserCard", b =>
@@ -737,26 +433,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasIndex("IdUser");
 
                     b.ToTable("UserCard", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IdCard = "1",
-                            IdUser = "1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IdCard = "2",
-                            IdUser = "2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            IdCard = "3",
-                            IdUser = "1"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.UserNotification", b =>
@@ -782,20 +458,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasIndex("IdUser");
 
                     b.ToTable("UserNotification", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IdNotification = "1",
-                            IdUser = "1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IdNotification = "2",
-                            IdUser = "2"
-                        });
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.UserSavingAccount", b =>
@@ -821,26 +483,6 @@ namespace SavingAccount_BE.Migrations
                     b.HasIndex("IdUser");
 
                     b.ToTable("UserSavingAccount", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            IdSavingAccount = "1",
-                            IdUser = "1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IdSavingAccount = "2",
-                            IdUser = "1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            IdSavingAccount = "3",
-                            IdUser = "2"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -934,9 +576,17 @@ namespace SavingAccount_BE.Migrations
 
             modelBuilder.Entity("SavingAccount_BE.Model.User", b =>
                 {
+                    b.HasOne("SavingAccount_BE.Data.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("IdUser")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("SavingAccount_BE.Model.User", null)
                         .WithMany("Relatives")
                         .HasForeignKey("UserIdUser");
+
+                    b.Navigation("ApplicationUser");
                 });
 
             modelBuilder.Entity("SavingAccount_BE.Model.UserCard", b =>

@@ -3,11 +3,11 @@ using SavingAccount_BE.Model;
 
 namespace SavingAccount_BE.Service.Users.Cards
 {
-    public class UserCard : IUserCard
+    public class UserCardService : IUserCard
     {
         private readonly SavingAccountDbContext _dbContext;
 
-        public UserCard(SavingAccountDbContext dbContext)
+        public UserCardService(SavingAccountDbContext dbContext)
         {
             _dbContext = dbContext;
         }
