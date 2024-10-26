@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using SavingAccount_BE.Data;
 using SavingAccount_BE.Model;
 using SavingAccount_BE.Service.Accounts;
 
@@ -39,5 +41,19 @@ namespace SavingAccount_BE.Controllers
             return Ok(result);
 
         }
+
+        [HttpPost("VerifyPassword")]
+        public async Task<IActionResult> VerifyPassword([FromBody] UserDTO model)
+        {
+            var isPasswordValid = await _repo.VerifyPasswordAsync(model);
+            if (!isPasswordValid)
+            {
+                return BadRequest("Mật khẩu hiện tại không chính xác.");
+            }
+
+            return Ok("Mật khẩu hợp lệ.");
+        }
+
+
     }
 }

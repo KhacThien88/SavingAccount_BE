@@ -73,15 +73,26 @@ namespace SavingAccount_BE.Service.Accounts
                 return result;
             }
             await _userManager.AddToRoleAsync(user, "User");
-
             _dbContext.Users.Add(new User
             {
                 IdUser = user.Id,
             });
-
             await _dbContext.SaveChangesAsync();
             return result;
         }
-
+        public async Task<bool> VerifyPasswordAsync(UserDTO model)
+        {
+            var user = await _userManager.FindByIdAsync(model.IdUser);
+            if (user == null)
+            {
+                return false;
+            }
+            var isPasswordValid = await _userManager.CheckPasswordAsync(user, model.PasswordHash);
+            if (isPasswordValid)
+            {
+                await _userManager.ChangePasswordAsync(user, model.PasswordHash, model.NewPassword);
+            }
+            return isPasswordValid;
+        }
     }
 }

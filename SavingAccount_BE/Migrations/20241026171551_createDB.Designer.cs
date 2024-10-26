@@ -12,7 +12,7 @@ using SavingAccount_BE.Data;
 namespace SavingAccount_BE.Migrations
 {
     [DbContext(typeof(SavingAccountDbContext))]
-    [Migration("20241026092222_createDB")]
+    [Migration("20241026171551_createDB")]
     partial class createDB
     {
         /// <inheritdoc />

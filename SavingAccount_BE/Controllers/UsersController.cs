@@ -46,7 +46,7 @@ namespace SavingAccount_BE.Controllers
             return Ok(_userSavingAccountService.GetListSavingAccounts(userId));
         }
         [HttpGet("Profile")]
-        //[Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "User")]
         public IActionResult GetProfile([FromQuery] string userId)
         {
             return Ok(_userProfileService.GetProfile(userId));

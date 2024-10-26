@@ -97,6 +97,7 @@ builder.Services.AddAuthentication(options =>
 var app = builder.Build();
 
 await RoleSeeder.InitializeRoles(app.Services);
+await UserSeeder.InitializeUsers(app.Services);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
