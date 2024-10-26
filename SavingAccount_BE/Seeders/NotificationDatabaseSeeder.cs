@@ -7,8 +7,8 @@ namespace SavingAccount_BE.Seeders
     {
         public static void SeedNotification(this ModelBuilder modelBuilder) {
             modelBuilder.Entity<Notification>().HasData(
-                new Notification() { IdNotification = "1" , Content = "Day la VKT"},
-                new Notification() { IdNotification = "2", Content = "Day la LPT" }
+                new Notification() { IdNotification = "1" , Content = "Content1"},
+                new Notification() { IdNotification = "2", Content = "Content2" }
                 );
         }
     }

@@ -1,17 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SavingAccount_BE.Configuration;
 using SavingAccount_BE.Model;
 using SavingAccount_BE.Seeders;
 
 namespace SavingAccount_BE.Data
 {
-    public class SavingAccountDbContext : DbContext
+    public class SavingAccountDbContext : IdentityDbContext<ApplicationUser>
     {
         public SavingAccountDbContext(DbContextOptions options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new HistoryConfiguration());
             modelBuilder.ApplyConfiguration(new CardConfiguration());

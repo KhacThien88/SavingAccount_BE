@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using SavingAccount_BE.Model;
 using SavingAccount_BE.Service.Users.Cards;
@@ -25,23 +26,27 @@ namespace SavingAccount_BE.Controllers
         }
 
         [HttpGet("Wallet")]
+        //[Authorize(Roles = "User")]
         public IActionResult GetListCards([FromQuery] string userId)
         {
             return Ok(_userCardService.GetListCards(userId));
         }
 
         [HttpGet("History")]
+        //[Authorize(Roles = "User")]
         public IActionResult GetListHistory([FromQuery] string userId)
         {
             return Ok(_userHistoryService.GetHistory(userId));
         }
 
         [HttpGet("ListSavingAccounts")]
+        //[Authorize(Roles = "User")]
         public IActionResult GetListSavingAccounts([FromQuery] string userId)
         {
             return Ok(_userSavingAccountService.GetListSavingAccounts(userId));
         }
         [HttpGet("Profile")]
+        //[Authorize(Roles = "Admin")]
         public IActionResult GetProfile([FromQuery] string userId)
         {
             return Ok(_userProfileService.GetProfile(userId));
