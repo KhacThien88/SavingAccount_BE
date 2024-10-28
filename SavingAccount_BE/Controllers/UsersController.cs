@@ -79,6 +79,22 @@ namespace SavingAccount_BE.Controllers
                 return StatusCode(500, "Failed to update profile.");
             }
         }
+        [HttpPost("opening-SavingAccount")]
+        public async Task<IActionResult> openSavingAccount([FromBody] AddSavingAccountModel addSavingAccountModel)
+        {
+            if (addSavingAccountModel == null)
+            {
+                return BadRequest("Invalid Saving Account data.");
+            }
+            var isAdd = await _userSavingAccountService.AddSavingAccountAsync(addSavingAccountModel);
+            if (isAdd) {
+                return Ok("Add saving account success");
+            }
+            else
+            {
+                return StatusCode(500, "Failed to open saving account!");
+            }
+        }
 
 
         // PUT api/<ValuesController>/5

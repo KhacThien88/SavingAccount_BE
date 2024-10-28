@@ -12,8 +12,8 @@ using SavingAccount_BE.Data;
 namespace SavingAccount_BE.Migrations
 {
     [DbContext(typeof(SavingAccountDbContext))]
-    [Migration("20241026171551_createDB")]
-    partial class createDB
+    [Migration("20241028013421_initDB")]
+    partial class initDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

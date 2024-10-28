@@ -7,6 +7,7 @@ using SavingAccount_BE.Data;
 using SavingAccount_BE.Model;
 using SavingAccount_BE.Seeders;
 using SavingAccount_BE.Service.Accounts;
+using SavingAccount_BE.Service.Admin.AddUserCard;
 using SavingAccount_BE.Service.Users.Cards;
 using SavingAccount_BE.Service.Users.Histories;
 using SavingAccount_BE.Service.Users.Profile;
@@ -63,6 +64,7 @@ builder.Services.AddTransient<IUserHistory, UserHistory>();
 builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountService>();
 builder.Services.AddTransient<IUserProfile ,UserProfile>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddTransient<IAddUserCard, AddUserCard>();
 builder.Services.AddDbContext<SavingAccountDbContext>(
     option =>
     {

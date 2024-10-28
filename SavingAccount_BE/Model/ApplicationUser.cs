@@ -11,5 +11,7 @@ namespace SavingAccount_BE.Data
         public string Address {  get; set; }
         public string Nation { get; set; }
         public string? Base64Image { get; set; }
+
+        
     }
 }

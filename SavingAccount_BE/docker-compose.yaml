@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong!Passw0rd
+      - MSSQL_DB=SavingAccount
+    ports:
+      - "1433:1433"
+    networks:
+      - mynetwork
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: SavingAccount_BE
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=SavingAccount;User Id=sa;Password=YourStrong!Passw0rd;
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlserver
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  sql_data:
