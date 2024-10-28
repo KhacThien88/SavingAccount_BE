@@ -9,7 +9,7 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
     {
         private readonly SavingAccountDbContext _dbContext;
         private readonly ILogger<UserSavingAccountService> _logger;
-        public readonly UserManager<ApplicationUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         public UserSavingAccountService(SavingAccountDbContext dbcontext, ILogger<UserSavingAccountService> logger, UserManager<ApplicationUser> userManager)
         {
 
@@ -23,13 +23,12 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
             var user = _dbContext.ApplicationUsers.FirstOrDefault(u => u.Id == addSavingAccountModel.IdUser);
             if (user == null || !await _userManager.CheckPasswordAsync(user, addSavingAccountModel.Password))
             {
-                _logger.LogError("Failed to find user or password does not match.");
                 return false;
             }
+            var checkValidSavingAccount = _dbContext.SavingAccounts.FirstOrDefault(sa => sa.NameOfSavingAccount == addSavingAccountModel.SavingAccountName);
             var card = _dbContext.Cards.FirstOrDefault(c => c.IdCard == addSavingAccountModel.IdCard);
-            if (card == null && card.Balance < addSavingAccountModel.Amount)
+            if (card == null && card.Balance < addSavingAccountModel.Amount && addSavingAccountModel.Amount < 100000 && checkValidSavingAccount != null)
             {
-                _logger.LogError("Failed to find card or insufficient balance.");
                 return false;
             }
             else
@@ -86,8 +85,9 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
 
         }
 
-        public List<SavingAccount> GetListSavingAccounts(string id)
+        public async Task<List<SavingAccount>> GetListSavingAccounts(string id)
         {
+            
             var user = _dbContext.Users.Where(u => u.IdUser == id);
             
             bool checkValidSavingAccounts = _dbContext.UserSavingAccounts
@@ -97,6 +97,7 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
             if (user == null && checkValidSavingAccounts) { 
                 return new List<SavingAccount>();
             }
+            await updateSavingAccountBalance(id);
 
             var listSavingAccountIds = _dbContext.UserSavingAccounts
                 .Where(usa => user.Select(u => u.IdUser).Contains(usa.IdUser))
@@ -131,6 +132,34 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
             return listSavingAccount;
         }
 
-       
+        public async Task<bool> updateSavingAccountBalance(string id)
+        {
+            List<SavingAccount> listsa = await GetListSavingAccounts(id);
+            foreach (var item in listsa)
+            {
+                double days = (DateTime.UtcNow - item.DateOpened).TotalDays;
+                if (item.Term == "3 months")
+                {
+                    double count = days % 90;
+                    int countInt = Convert.ToInt32(count);
+                    item.Balance += countInt * 0.5 / 100 * 3 * item.Balance;
+                }
+                else if (item.Term == "6 months")
+                {
+                    double count = days % 180;
+                    int countInt = Convert.ToInt32(count);
+                    item.Balance += countInt * 0.55 / 100 * 6 * item.Balance;
+                }
+                else
+                {
+                    double count = (days-30) % 30;
+                    int countInt = Convert.ToInt32(count);
+                    item.Balance += countInt * 0.15 / 100 * item.Balance;
+                }
+            }
+            var res = await _dbContext.SaveChangesAsync();
+
+            return res > 0;
+        }
     }
 }
