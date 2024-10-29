@@ -27,7 +27,7 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
             }
             var checkValidSavingAccount = _dbContext.SavingAccounts.FirstOrDefault(sa => sa.NameOfSavingAccount == addSavingAccountModel.SavingAccountName);
             var card = _dbContext.Cards.FirstOrDefault(c => c.IdCard == addSavingAccountModel.IdCard);
-            if (card == null && card.Balance < addSavingAccountModel.Amount && addSavingAccountModel.Amount < 100000 && checkValidSavingAccount != null)
+            if (card == null || card.Balance < addSavingAccountModel.Amount || addSavingAccountModel.Amount < 100000 || checkValidSavingAccount != null)
             {
                 return false;
             }
@@ -85,76 +85,133 @@ namespace SavingAccount_BE.Service.Users.SavingAccounts
 
         }
 
-        public async Task<List<SavingAccount>> GetListSavingAccounts(string id)
+        public List<SavingAccount> GetListSavingAccounts(string id)
         {
-            
-            var user = _dbContext.Users.Where(u => u.IdUser == id);
-            
-            bool checkValidSavingAccounts = _dbContext.UserSavingAccounts
-                .Where(usa => user.Select(u => u.IdUser).Contains(usa.IdUser))
-                .Any();
+            // Step 1: Get the user ID list first, forcing it to execute with .ToList()
+            var userIds = _dbContext.Users
+                .Where(u => u.IdUser == id)
+                .Select(u => u.IdUser)
+                .ToList(); 
 
-            if (user == null && checkValidSavingAccounts) { 
+            if (!userIds.Any())
+            {
                 return new List<SavingAccount>();
             }
-            await updateSavingAccountBalance(id);
+
+          
+            var hasValidSavingAccounts = _dbContext.UserSavingAccounts
+                .Any(usa => userIds.Contains(usa.IdUser));
+
+            if (!hasValidSavingAccounts)
+            {
+                return new List<SavingAccount>();
+            }
 
             var listSavingAccountIds = _dbContext.UserSavingAccounts
-                .Where(usa => user.Select(u => u.IdUser).Contains(usa.IdUser))
-                .Select(u => u.IdSavingAccount);
-            var listSavingAccount = _dbContext.SavingAccounts
+                .Where(usa => userIds.Contains(usa.IdUser))
+                .Select(usa => usa.IdSavingAccount)
+                .ToList();
+
+            var listSavingAccounts = _dbContext.SavingAccounts
                 .Where(sa => listSavingAccountIds.Contains(sa.IdSavingAccount))
                 .ToList();
 
-            foreach (var savingAccount in listSavingAccount)
+            foreach (var savingAccount in listSavingAccounts)
             {
                 var savingAccountHistories = _dbContext.SavingAccountsHistory
                     .Where(sah => sah.IdSavingAccount == savingAccount.IdSavingAccount)
-                    .Select(sah => sah.History);
+                    .Select(sah => sah.History)
+                    .ToList();
 
-                double totalDeposits = 0;
-                double totalWithdraws = 0;
+                double totalDeposits = savingAccountHistories
+                    .Where(history => history.Change > 0)
+                    .Sum(history => history.Change);
 
-                foreach (var history in savingAccountHistories)
-                {
-                    if (history.Change > 0)
-                    {
-                        totalDeposits += history.Change;
-                    }
-                    else if (history.Change < 0)
-                    {
-                        totalWithdraws += Math.Abs(history.Change);
-                    }
-                }
+                double totalWithdraws = savingAccountHistories
+                    .Where(history => history.Change < 0)
+                    .Sum(history => Math.Abs(history.Change));
+
                 savingAccount.Deposits = totalDeposits;
                 savingAccount.Withdraw = totalWithdraws;
             }
-            return listSavingAccount;
+
+            return listSavingAccounts;
         }
+
+
 
         public async Task<bool> updateSavingAccountBalance(string id)
         {
-            List<SavingAccount> listsa = await GetListSavingAccounts(id);
+            List<SavingAccount> listsa =  GetListSavingAccounts(id);
             foreach (var item in listsa)
             {
                 double days = (DateTime.UtcNow - item.DateOpened).TotalDays;
+                var saID = Guid.NewGuid().ToString();
                 if (item.Term == "3 months")
                 {
                     double count = days % 90;
                     int countInt = Convert.ToInt32(count);
                     item.Balance += countInt * 0.5 / 100 * 3 * item.Balance;
+                    if (countInt > 0)
+                    {
+                        _dbContext.Histories.Add(new History()
+                        {
+                            Change = countInt * 0.5 / 100 * 3 * item.Balance,
+                            DateTransfer = DateTime.Now,
+                            IdHistory = saID,
+                            Note = "Thanh toan lai"
+                        });
+                        _dbContext.SavingAccountsHistory.Add(new()
+                        {
+                            IdHistory = saID,
+                            IdSavingAccount = item.IdSavingAccount
+                        });
+                    }
+
                 }
                 else if (item.Term == "6 months")
                 {
                     double count = days % 180;
                     int countInt = Convert.ToInt32(count);
-                    item.Balance += countInt * 0.55 / 100 * 6 * item.Balance;
+                    if (countInt > 0)
+                    {
+                        item.Balance += countInt * 0.55 / 100 * 6 * item.Balance;
+                        _dbContext.Histories.Add(new History()
+                        {
+                            Change = countInt * 0.55 / 100 * 6 * item.Balance,
+                            DateTransfer = DateTime.Now,
+                            IdHistory =saID,
+                            Note = "Thanh toan lai"
+                        });
+                        _dbContext.SavingAccountsHistory.Add(new()
+                        {
+                            IdHistory = saID,
+                            IdSavingAccount = item.IdSavingAccount
+                        });
+
+                    }
                 }
                 else
                 {
                     double count = (days-30) % 30;
                     int countInt = Convert.ToInt32(count);
-                    item.Balance += countInt * 0.15 / 100 * item.Balance;
+                    if (countInt > 0)
+                    {
+                        item.Balance += countInt * 0.15 / 100 * item.Balance;
+                        _dbContext.Histories.Add(new History()
+                        {
+                            Change = countInt * 0.55 / 100 * 6 * item.Balance,
+                            DateTransfer = DateTime.Now,
+                            IdHistory = Guid.NewGuid().ToString(),
+                            Note = "Thanh toan lai"
+                        });
+                        _dbContext.SavingAccountsHistory.Add(new()
+                        {
+                            IdHistory = saID,
+                            IdSavingAccount = item.IdSavingAccount
+                        });
+                    }
+
                 }
             }
             var res = await _dbContext.SaveChangesAsync();

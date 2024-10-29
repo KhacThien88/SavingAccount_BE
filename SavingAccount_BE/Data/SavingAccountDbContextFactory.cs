@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Options;
 
 namespace SavingAccount_BE.Data
 {
@@ -15,6 +16,7 @@ namespace SavingAccount_BE.Data
             var connectionString = configurationRoot.GetConnectionString("UsersDatabase");
             var optionBuilder = new DbContextOptionsBuilder<SavingAccountDbContext>();
             optionBuilder.UseSqlServer(connectionString);
+
             return new SavingAccountDbContext(optionBuilder.Options);
         }
     }

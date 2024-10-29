@@ -25,7 +25,7 @@ namespace SavingAccount_BE.Service.Users.Deposits
                 return false; 
             }
             var card = _dbContext.Cards.FirstOrDefault(c => c.IdCard == savingAccountDeposits.IdCard);
-            if (card == null && card.Balance < savingAccountDeposits.Amount && savingAccountDeposits.Amount < 100000)
+            if (card == null || card.Balance < savingAccountDeposits.Amount || savingAccountDeposits.Amount < 100000)
             {
                 return false;
             }
@@ -56,6 +56,7 @@ namespace SavingAccount_BE.Service.Users.Deposits
                 IdCard = card.IdCard
             });
             sa.Balance += savingAccountDeposits.Amount;
+            card.Balance -= savingAccountDeposits.Amount;
             var res = await _dbContext.SaveChangesAsync();
             return res > 0;
         }
@@ -93,7 +94,7 @@ namespace SavingAccount_BE.Service.Users.Deposits
                 IdSavingAccount = sa.IdSavingAccount,
             });
            
-            sa.Balance += savingAccountWithdraws.Amount;
+            sa.Balance -= savingAccountWithdraws.Amount;
             var res = await _dbContext.SaveChangesAsync();
             return res > 0;
         }

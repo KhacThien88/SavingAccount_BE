@@ -9,6 +9,7 @@ using SavingAccount_BE.Seeders;
 using SavingAccount_BE.Service.Accounts;
 using SavingAccount_BE.Service.Admin.AddUserCard;
 using SavingAccount_BE.Service.Users.Cards;
+using SavingAccount_BE.Service.Users.Deposits;
 using SavingAccount_BE.Service.Users.Histories;
 using SavingAccount_BE.Service.Users.Profile;
 using SavingAccount_BE.Service.Users.SavingAccounts;
@@ -32,7 +33,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "SavingAccount API", Version = "v1" });
 
-    // C?u hình xác th?c JWT cho Swagger
+    // C?u hï¿½nh xï¿½c th?c JWT cho Swagger
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -40,7 +41,7 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Nh?p 'Bearer' [kho?ng tr?ng] và sau ?ó dán token JWT c?a b?n."
+        Description = "Nh?p 'Bearer' [kho?ng tr?ng] vï¿½ sau ?ï¿½ dï¿½n token JWT c?a b?n."
     });
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -65,6 +66,8 @@ builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountServic
 builder.Services.AddTransient<IUserProfile ,UserProfile>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddTransient<IAddUserCard, AddUserCard>();
+builder.Services.AddTransient<IDepositsAndWithdraws ,DepositsAndWithdraws>();
+
 builder.Services.AddDbContext<SavingAccountDbContext>(
     option =>
     {
@@ -98,15 +101,18 @@ builder.Services.AddAuthentication(options =>
 });
 var app = builder.Build();
 
-await RoleSeeder.InitializeRoles(app.Services);
-await UserSeeder.InitializeUsers(app.Services);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    using var serviceScope = app.Services.CreateScope();
+    using var dbContext = serviceScope.ServiceProvider.GetService<SavingAccountDbContext>();
+    dbContext?.Database.Migrate();
 }
+await RoleSeeder.InitializeRoles(app.Services);
+await UserSeeder.InitializeUsers(app.Services);
 
 app.UseCors(
     builder =>
