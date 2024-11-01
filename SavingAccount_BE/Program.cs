@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SavingAccount_BE.Data;
@@ -8,6 +9,7 @@ using SavingAccount_BE.Model;
 using SavingAccount_BE.Seeders;
 using SavingAccount_BE.Service.Accounts;
 using SavingAccount_BE.Service.Admin.AddUserCard;
+using SavingAccount_BE.Service.MailSender;
 using SavingAccount_BE.Service.Users.Cards;
 using SavingAccount_BE.Service.Users.Deposits;
 using SavingAccount_BE.Service.Users.Histories;
@@ -67,6 +69,8 @@ builder.Services.AddTransient<IUserProfile ,UserProfile>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddTransient<IAddUserCard, AddUserCard>();
 builder.Services.AddTransient<IDepositsAndWithdraws ,DepositsAndWithdraws>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
 builder.Services.AddDbContext<SavingAccountDbContext>(
     option =>
