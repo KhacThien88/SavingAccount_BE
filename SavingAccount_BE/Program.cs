@@ -10,18 +10,25 @@ using SavingAccount_BE.Seeders;
 using SavingAccount_BE.Service.Accounts;
 using SavingAccount_BE.Service.Admin.AddUserCard;
 using SavingAccount_BE.Service.MailSender;
+using SavingAccount_BE.Service.RabbitMQ;
 using SavingAccount_BE.Service.Users.Cards;
 using SavingAccount_BE.Service.Users.Deposits;
 using SavingAccount_BE.Service.Users.Histories;
 using SavingAccount_BE.Service.Users.Profile;
 using SavingAccount_BE.Service.Users.SavingAccounts;
+using Serilog;
 using System.Text;
 using System.Text.Json.Serialization;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+Log.Logger = new LoggerConfiguration()
+           .MinimumLevel.Debug()
+           .WriteTo.Console()
+           .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Minute)
+           .CreateLogger();
+builder.Host.UseSerilog();
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -61,7 +68,8 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
-
+builder.Services.AddSingleton<RabbitMqProducer>();
+builder.Services.AddSingleton<RabbitMQConsumer>();
 builder.Services.AddTransient<IUserCard, UserCardService>();
 builder.Services.AddTransient<IUserHistory, UserHistory>();
 builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountService>();
@@ -128,7 +136,7 @@ app.UseCors(
     }
 );
 
-
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
