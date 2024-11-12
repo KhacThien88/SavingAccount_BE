@@ -12,7 +12,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
         private readonly string _hostname = "localhost";
         private readonly string _queueName = "example-queue";
         private IConnection _connection;
-        private IModel _channel;
+        private IChannel _channel;
 
         public RabbitMQConsumer(ILogger<RabbitMQConsumer> logger)
         {
@@ -26,7 +26,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
             {
                 var factory = new ConnectionFactory { HostName = _hostname };
                 _connection = await factory.CreateConnectionAsync();
-                using var _channel = await _connection.CreateChannelAsync();
+                _channel = await _connection.CreateChannelAsync();
 
                 // Declare the queue to ensure it exists
                 await _channel.QueueDeclareAsync(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
@@ -39,9 +39,6 @@ namespace SavingAccount_BE.Service.RabbitMQ
         }
         public async Task StartConsuming()
         {
-            var factory = new ConnectionFactory { HostName = _hostname };
-            _connection = await factory.CreateConnectionAsync();
-            using var _channel = await _connection.CreateChannelAsync();
             var consumer = new AsyncEventingBasicConsumer(_channel);
             consumer.ReceivedAsync += async (model, ea) =>
             {

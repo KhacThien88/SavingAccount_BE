@@ -1,0 +1,254 @@
+2024-11-09 09:55:02.659 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-11-09 09:55:03.812 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2024-11-09 09:55:03.817 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2024-11-09 09:55:04.070 +07:00 [DBG] The property 'User.UserIdUser' was created in shadow state because there are no eligible CLR members with a matching name.
+2024-11-09 09:55:04.341 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2024-11-09 09:55:04.368 +07:00 [DBG] Creating DbConnection.
+2024-11-09 09:55:04.446 +07:00 [DBG] Created DbConnection. (72ms).
+2024-11-09 09:55:04.458 +07:00 [DBG] Migrating using database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:04.474 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:06.606 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:06.637 +07:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-11-09 09:55:06.654 +07:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (14ms).
+2024-11-09 09:55:06.663 +07:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (30ms).
+2024-11-09 09:55:06.690 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-11-09 09:55:07.003 +07:00 [INF] Executed DbCommand (321ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-11-09 09:55:07.013 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.039 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (18ms).
+2024-11-09 09:55:07.050 +07:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-11-09 09:55:07.053 +07:00 [DBG] Created DbCommand for 'ExecuteScalar' (2ms).
+2024-11-09 09:55:07.056 +07:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (5ms).
+2024-11-09 09:55:07.058 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.063 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.069 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-11-09 09:55:07.325 +07:00 [INF] Executed DbCommand (256ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-11-09 09:55:07.339 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.343 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (3ms).
+2024-11-09 09:55:07.346 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.348 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.353 +07:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-11-09 09:55:07.358 +07:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (5ms).
+2024-11-09 09:55:07.363 +07:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (10ms).
+2024-11-09 09:55:07.368 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-11-09 09:55:07.605 +07:00 [INF] Executed DbCommand (237ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-11-09 09:55:07.616 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.620 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (3ms).
+2024-11-09 09:55:07.625 +07:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-11-09 09:55:07.631 +07:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2024-11-09 09:55:07.634 +07:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (9ms).
+2024-11-09 09:55:07.638 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.644 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.647 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-11-09 09:55:07.906 +07:00 [INF] Executed DbCommand (259ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-11-09 09:55:07.912 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.918 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (5ms).
+2024-11-09 09:55:07.949 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.958 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:07.964 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-11-09 09:55:07.966 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-11-09 09:55:07.968 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2024-11-09 09:55:07.971 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-11-09 09:55:08.195 +07:00 [INF] Executed DbCommand (223ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-11-09 09:55:08.207 +07:00 [DBG] Closing data reader to 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:08.212 +07:00 [DBG] A data reader for 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' is being disposed after spending 8ms reading results.
+2024-11-09 09:55:08.219 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:08.224 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (5ms).
+2024-11-09 09:55:08.274 +07:00 [INF] No migrations were applied. The database is already up to date.
+2024-11-09 09:55:08.281 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2024-11-09 09:55:08.289 +07:00 [DBG] Disposing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:08.295 +07:00 [DBG] Disposed connection to database '' on server '' (6ms).
+2024-11-09 09:55:08.331 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2024-11-09 09:55:08.459 +07:00 [DBG] Compiling query expression: 
+'DbSet<IdentityRole>()
+    .FirstOrDefault(r => r.NormalizedName == __normalizedName_0)'
+2024-11-09 09:55:08.849 +07:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: new SingleQueryingEnumerable<IdentityRole>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @__normalizedName_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, IdentityRole>, 
+        SavingAccount_BE.Data.SavingAccountDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-11-09 09:55:08.918 +07:00 [DBG] Creating DbConnection.
+2024-11-09 09:55:08.920 +07:00 [DBG] Created DbConnection. (2ms).
+2024-11-09 09:55:08.930 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:08.948 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:08.956 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-11-09 09:55:08.959 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-11-09 09:55:08.968 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (12ms).
+2024-11-09 09:55:08.976 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-09 09:55:09.253 +07:00 [INF] Executed DbCommand (281ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-09 09:55:09.325 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-09 09:55:09.361 +07:00 [DBG] Closing data reader to 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.368 +07:00 [DBG] A data reader for 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' is being disposed after spending 110ms reading results.
+2024-11-09 09:55:09.376 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.380 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (4ms).
+2024-11-09 09:55:09.389 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.392 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.396 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-11-09 09:55:09.398 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-11-09 09:55:09.400 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2024-11-09 09:55:09.402 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-09 09:55:09.625 +07:00 [INF] Executed DbCommand (222ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-09 09:55:09.634 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-09 09:55:09.642 +07:00 [DBG] Closing data reader to 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.646 +07:00 [DBG] A data reader for 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' is being disposed after spending 12ms reading results.
+2024-11-09 09:55:09.653 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.659 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (6ms).
+2024-11-09 09:55:09.667 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2024-11-09 09:55:09.669 +07:00 [DBG] Disposing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.672 +07:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-11-09 09:55:09.730 +07:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-09 09:55:09.869 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2024-11-09 09:55:09.873 +07:00 [DBG] Creating DbConnection.
+2024-11-09 09:55:09.874 +07:00 [DBG] Created DbConnection. (1ms).
+2024-11-09 09:55:09.877 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.880 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:09.882 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-11-09 09:55:09.883 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-11-09 09:55:09.886 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2024-11-09 09:55:09.888 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-09 09:55:10.111 +07:00 [INF] Executed DbCommand (223ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2024-11-09 09:55:10.118 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-09 09:55:10.124 +07:00 [DBG] Closing data reader to 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.130 +07:00 [DBG] A data reader for 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' is being disposed after spending 12ms reading results.
+2024-11-09 09:55:10.133 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.136 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (3ms).
+2024-11-09 09:55:10.145 +07:00 [DBG] Compiling query expression: 
+'DbSet<ApplicationUser>()
+    .SingleOrDefault(u => u.NormalizedEmail == __normalizedEmail_0)'
+2024-11-09 09:55:10.163 +07:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ApplicationUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<ApplicationUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.Address (string) Required, 2], [Property: ApplicationUser.Base64Image (string), 3], [Property: ApplicationUser.BirthDate (DateTime) Required, 4], [Property: ApplicationUser.City (string) Required, 5], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 6], [Property: ApplicationUser.Email (string) MaxLength(256), 7], [Property: ApplicationUser.EmailConfirmed (bool) Required, 8], [Property: ApplicationUser.FullName (string) Required, 9], [Property: ApplicationUser.LockoutEnabled (bool) Required, 10], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 11], [Property: ApplicationUser.Nation (string) Required, 12], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 13], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 14], [Property: ApplicationUser.PasswordHash (string), 15], [Property: ApplicationUser.PhoneNumber (string), 16], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 17], [Property: ApplicationUser.Province (string) Required, 18], [Property: ApplicationUser.SecurityStamp (string), 19], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 20], [Property: ApplicationUser.UserName (string) MaxLength(256), 21] }
+            SELECT TOP(2) a.Id, a.AccessFailedCount, a.Address, a.Base64Image, a.BirthDate, a.City, a.ConcurrencyStamp, a.Email, a.EmailConfirmed, a.FullName, a.LockoutEnabled, a.LockoutEnd, a.Nation, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.Province, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedEmail == @__normalizedEmail_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, ApplicationUser>, 
+        SavingAccount_BE.Data.SavingAccountDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-11-09 09:55:10.167 +07:00 [DBG] Opening connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.170 +07:00 [DBG] Opened connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.172 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-11-09 09:55:10.173 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-11-09 09:55:10.177 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (5ms).
+2024-11-09 09:55:10.180 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-09 09:55:10.416 +07:00 [INF] Executed DbCommand (237ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-11-09 09:55:10.456 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-11-09 09:55:10.529 +07:00 [DBG] Closing data reader to 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.532 +07:00 [DBG] A data reader for 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' is being disposed after spending 103ms reading results.
+2024-11-09 09:55:10.537 +07:00 [DBG] Closing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.539 +07:00 [DBG] Closed connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com' (2ms).
+2024-11-09 09:55:10.543 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2024-11-09 09:55:10.546 +07:00 [DBG] Disposing connection to database 'SavingAccountDB' on server 'SavingAccountDB.mssql.somee.com'.
+2024-11-09 09:55:10.548 +07:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-11-09 09:55:10.649 +07:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-11-09 09:55:10.775 +07:00 [DBG] Hosting starting
+2024-11-09 09:55:10.802 +07:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-2b957df3-6753-4ee6-b989-c383549b460e.xml'.
+2024-11-09 09:55:10.816 +07:00 [DBG] Found key {2b957df3-6753-4ee6-b989-c383549b460e}.
+2024-11-09 09:55:10.840 +07:00 [DBG] Considering key {2b957df3-6753-4ee6-b989-c383549b460e} with expiration date 2025-01-23 17:03:43Z as default key.
+2024-11-09 09:55:10.850 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-09 09:55:10.854 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-11-09 09:55:10.858 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-11-09 09:55:10.865 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-11-09 09:55:10.869 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-11-09 09:55:10.874 +07:00 [DBG] Using key {2b957df3-6753-4ee6-b989-c383549b460e} as the default key.
+2024-11-09 09:55:10.877 +07:00 [DBG] Key ring with default key {2b957df3-6753-4ee6-b989-c383549b460e} was loaded during application startup.
+2024-11-09 09:55:11.217 +07:00 [INF] Now listening on: https://localhost:7231
+2024-11-09 09:55:11.220 +07:00 [INF] Now listening on: http://localhost:5136
+2024-11-09 09:55:11.222 +07:00 [DBG] Loaded hosting startup assembly SavingAccount_BE
+2024-11-09 09:55:11.224 +07:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-11-09 09:55:11.228 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-11-09 09:55:11.230 +07:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-11-09 09:55:11.346 +07:00 [DBG] Connection id "0HN80D7MOP6UF" received FIN.
+2024-11-09 09:55:11.358 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-09 09:55:11.369 +07:00 [INF] Hosting environment: Development
+2024-11-09 09:55:11.371 +07:00 [INF] Content root path: D:\SavingAccountBECon\SavingAccount_BE\SavingAccount_BE
+2024-11-09 09:55:11.372 +07:00 [DBG] Hosting started
+2024-11-09 09:55:11.374 +07:00 [DBG] Connection id "0HN80D7MOP6UF" accepted.
+2024-11-09 09:55:11.382 +07:00 [DBG] Connection id "0HN80D7MOP6UF" started.
+2024-11-09 09:55:11.428 +07:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-11-09 09:55:11.475 +07:00 [DBG] Connection id "0HN80D7MOP6UF" stopped.
+2024-11-09 09:55:11.482 +07:00 [DBG] Connection id "0HN80D7MOP6UF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-09 09:55:11.718 +07:00 [DBG] Connection id "0HN80D7MOP6UG" accepted.
+2024-11-09 09:55:11.725 +07:00 [DBG] Connection id "0HN80D7MOP6UG" started.
+2024-11-09 09:55:11.839 +07:00 [DBG] Connection 0HN80D7MOP6UG established using the following protocol: "Tls13"
+2024-11-09 09:55:11.970 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/swagger/index.html - null null
+2024-11-09 09:55:12.181 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-11-09 09:55:12.332 +07:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-11-09 09:55:12.337 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-11-09 09:55:12.377 +07:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-11-09 09:55:12.380 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-11-09 09:55:12.389 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/swagger/index.html - 200 null text/html;charset=utf-8 431.0655ms
+2024-11-09 09:55:12.397 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-09 09:55:12.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/_vs/browserLink - null null
+2024-11-09 09:55:12.421 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 23.5871ms
+2024-11-09 09:55:12.521 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/_vs/browserLink - 200 null text/javascript; charset=UTF-8 100.8964ms
+2024-11-09 09:55:12.859 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/swagger/v1/swagger.json - null null
+2024-11-09 09:55:13.062 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 203.1309ms
+2024-11-09 09:55:52.304 +07:00 [DBG] Connection id "0HN80D7MOP6UG" received FIN.
+2024-11-09 09:55:52.374 +07:00 [DBG] Connection id "0HN80D7MOP6UG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-09 09:55:52.385 +07:00 [DBG] Connection id "0HN80D7MOP6UG" is closed. The last processed stream ID was 7.
+2024-11-09 09:55:52.390 +07:00 [DBG] The connection queue processing loop for 0HN80D7MOP6UG completed.
+2024-11-09 09:55:52.398 +07:00 [DBG] Connection id "0HN80D7MOP6UG" stopped.

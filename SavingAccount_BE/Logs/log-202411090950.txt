@@ -1,0 +1,33 @@
+2024-11-09 09:50:44.306 +07:00 [DBG] Connection id "0HN80D2I6H8AG" accepted.
+2024-11-09 09:50:44.319 +07:00 [DBG] Connection id "0HN80D2I6H8AG" started.
+2024-11-09 09:50:44.344 +07:00 [DBG] Connection 0HN80D2I6H8AG established using the following protocol: "Tls13"
+2024-11-09 09:50:44.353 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/api/RabbitMQ/receive - null null
+2024-11-09 09:50:44.359 +07:00 [DBG] The request path  does not match the path filter
+2024-11-09 09:50:44.366 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-09 09:50:44.375 +07:00 [DBG] 1 candidate(s) found for the request path '/api/RabbitMQ/receive'
+2024-11-09 09:50:44.381 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)' with route pattern 'api/RabbitMQ/receive' is valid for the request path '/api/RabbitMQ/receive'
+2024-11-09 09:50:44.388 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)'
+2024-11-09 09:50:44.392 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)'
+2024-11-09 09:50:44.406 +07:00 [INF] Route matched with {action = "StartConsuming", controller = "RabbitMQ"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartConsuming() on controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE).
+2024-11-09 09:50:44.412 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-09 09:50:44.417 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-09 09:50:44.423 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-09 09:50:44.427 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-09 09:50:44.436 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-09 09:50:44.441 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE)
+2024-11-09 09:50:44.443 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE)
+2024-11-09 09:50:44.615 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-09 09:50:44.621 +07:00 [DBG] No information found on request to perform content negotiation.
+2024-11-09 09:50:44.622 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-11-09 09:50:44.624 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-11-09 09:50:44.626 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-11-09 09:50:44.627 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-09 09:50:44.630 +07:00 [INF] Executed action SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE) in 188.5691ms
+2024-11-09 09:50:44.635 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)'
+2024-11-09 09:50:44.636 +07:00 [INF] HTTP GET /api/RabbitMQ/receive responded 200 in 274.2863 ms
+2024-11-09 09:50:44.639 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/api/RabbitMQ/receive - 200 null text/plain; charset=utf-8 286.4686ms
+2024-11-09 09:50:51.843 +07:00 [DBG] Connection id "0HN80D2I6H8AG" received FIN.
+2024-11-09 09:50:51.880 +07:00 [DBG] Connection id "0HN80D2I6H8AG" is closed. The last processed stream ID was 1.
+2024-11-09 09:50:51.881 +07:00 [DBG] The connection queue processing loop for 0HN80D2I6H8AG completed.
+2024-11-09 09:50:51.883 +07:00 [DBG] Connection id "0HN80D2I6H8AG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-11-09 09:50:51.898 +07:00 [DBG] Connection id "0HN80D2I6H8AG" stopped.

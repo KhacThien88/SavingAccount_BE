@@ -39,12 +39,20 @@ namespace SavingAccount_BE.Service.RabbitMQ
                 using var channel = await _connection.CreateChannelAsync();
                 await channel.QueueDeclareAsync(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
 
-                byte[] messageBodyBytes = System.Text.Encoding.UTF8.GetBytes("Hello, world!");
-                var props = new BasicProperties();
-                props.ContentType = "text/plain";
-                props.DeliveryMode = (DeliveryModes)2;
-                await channel.BasicPublishAsync(exchange: " ", routingKey: _queueName,
-                    mandatory: true, basicProperties: props, body: messageBodyBytes);
+                byte[] messageBodyBytes = System.Text.Encoding.UTF8.GetBytes(message);
+                var props = new BasicProperties
+                {
+                    ContentType = "text/plain",
+                    DeliveryMode = (DeliveryModes)2 // Persistent
+                };
+
+                await channel.BasicPublishAsync(
+                    exchange: "",
+                    routingKey: _queueName,
+                    mandatory: true,
+                    basicProperties: props,
+                    body: messageBodyBytes
+                );
 
                 _logger.LogInformation($"Message Sent: {message}");
             }
@@ -54,5 +62,6 @@ namespace SavingAccount_BE.Service.RabbitMQ
                 throw;
             }
         }
+
     }
 }

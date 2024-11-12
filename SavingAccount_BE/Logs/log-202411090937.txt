@@ -1,0 +1,20 @@
+2024-11-09 09:37:38.504 +07:00 [DBG] Connection id "0HN80CT7729R4" accepted.
+2024-11-09 09:37:38.543 +07:00 [DBG] Connection id "0HN80CT7729R4" started.
+2024-11-09 09:37:38.587 +07:00 [DBG] Connection 0HN80CT7729R4 established using the following protocol: "Tls13"
+2024-11-09 09:37:38.619 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7231/api/RabbitMQ/send - application/json 8
+2024-11-09 09:37:38.625 +07:00 [DBG] POST requests are not supported
+2024-11-09 09:37:38.630 +07:00 [DBG] The request has an origin header: 'https://localhost:7231'.
+2024-11-09 09:37:38.632 +07:00 [INF] CORS policy execution successful.
+2024-11-09 09:37:42.922 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-09 09:37:42.960 +07:00 [DBG] 1 candidate(s) found for the request path '/api/RabbitMQ/send'
+2024-11-09 09:37:42.963 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.RabbitMQController.SendMessage (SavingAccount_BE)' with route pattern 'api/RabbitMQ/send' is valid for the request path '/api/RabbitMQ/send'
+2024-11-09 09:37:42.970 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.RabbitMQController.SendMessage (SavingAccount_BE)'
+2024-11-09 09:37:42.975 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.RabbitMQController.SendMessage (SavingAccount_BE)'
+2024-11-09 09:37:43.010 +07:00 [INF] Route matched with {action = "SendMessage", controller = "RabbitMQ"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendMessage(System.String) on controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE).
+2024-11-09 09:37:43.017 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-09 09:37:43.021 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-09 09:37:43.024 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-09 09:37:43.028 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-09 09:37:43.031 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-09 09:37:43.043 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE)
+2024-11-09 09:37:47.317 +07:00 [ERR] Failed to create connection: None of the specified endpoints were reachable
