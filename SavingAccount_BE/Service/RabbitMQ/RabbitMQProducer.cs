@@ -9,7 +9,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
     public class RabbitMqProducer
     {
         private readonly ILogger<RabbitMqProducer> _logger;
-        private readonly string _hostname = "localhost";
+        private readonly string _hostname = "3.107.206.208";
         private readonly string _queueName = "response-queue";
         private IConnection _connection;
 

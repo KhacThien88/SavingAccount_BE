@@ -1,9 +1,0 @@
-2024-11-13 15:15:53.012 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA"}
-2024-11-13 15:15:54.764 +07:00 [WRN] Failed to authenticate user admin@gmail.com
-2024-11-13 15:15:54.772 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
-2024-11-13 15:15:54.816 +07:00 [INF] Response message to send: {"Message":"Invalid credentials"}
-2024-11-13 15:15:54.820 +07:00 [INF] Send successfully
-2024-11-13 15:15:56.040 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
-2024-11-13 15:15:57.394 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
-2024-11-13 15:15:57.448 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiIwYTdjYmVkNy0yNWU5LTQ3YTctYjEwMy0xYjg3YTY5OGMwMzMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMTc1NywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.k6DusE-67pVoi_TYsWjBPSzfWv8Y4YB9E3izLEytnBZeR0FZTug1yuFTiZntDm_EqsrBdv467a_yF0jqYiooqA\u0022"}
-2024-11-13 15:15:57.454 +07:00 [INF] Send successfully

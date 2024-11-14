@@ -15,7 +15,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
         private readonly RabbitMqProducer _producer;
         private readonly IAccountService _accountService;
         private readonly ILogger<RabbitMQConsumer> _logger;
-        private readonly string _hostname = "localhost";
+        private readonly string _hostname = "3.107.206.208";
         private readonly string _queueName = "example-queue";
         private IConnection _connection;
         private IChannel _channel;
@@ -26,6 +26,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
             _accountService = accountService;
             _logger = logger;
             InitializeConnection().GetAwaiter().GetResult();
+            StartConsuming().GetAwaiter().GetResult();
         }
 
         private async Task InitializeConnection()
@@ -48,7 +49,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
         private async Task<string> AuthenticateViaSignInEndpoint(SignInModel loginRequest)
         {
             using var client = new HttpClient();
-            client.BaseAddress = new Uri("https://www.hcmuskhacthien.somee.com");
+            client.BaseAddress = new Uri("https://www.devkhacthien.somee.com");
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
             var jsonContent = new StringContent(JsonSerializer.Serialize(loginRequest), Encoding.UTF8, "application/json");
