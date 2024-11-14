@@ -1,0 +1,30 @@
+2024-11-13 15:33:37.319 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/api/RabbitMQ/receive - null null
+2024-11-13 15:33:37.333 +07:00 [DBG] The request path  does not match the path filter
+2024-11-13 15:33:37.447 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-11-13 15:33:37.495 +07:00 [DBG] 1 candidate(s) found for the request path '/api/RabbitMQ/receive'
+2024-11-13 15:33:37.499 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)' with route pattern 'api/RabbitMQ/receive' is valid for the request path '/api/RabbitMQ/receive'
+2024-11-13 15:33:37.503 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)'
+2024-11-13 15:33:37.511 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)'
+2024-11-13 15:33:37.538 +07:00 [INF] Route matched with {action = "StartConsuming", controller = "RabbitMQ"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] StartConsuming() on controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE).
+2024-11-13 15:33:37.548 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-11-13 15:33:37.551 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-11-13 15:33:37.554 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-11-13 15:33:37.557 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-11-13 15:33:37.561 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-11-13 15:33:37.568 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE)
+2024-11-13 15:33:37.796 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE)
+2024-11-13 15:33:37.827 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-13 15:33:37.832 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA"}
+2024-11-13 15:33:37.833 +07:00 [DBG] No information found on request to perform content negotiation.
+2024-11-13 15:33:37.835 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-11-13 15:33:37.836 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-11-13 15:33:37.839 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-11-13 15:33:37.845 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-13 15:33:37.855 +07:00 [INF] Executed action SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE) in 283.9135ms
+2024-11-13 15:33:37.858 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsuming (SavingAccount_BE)'
+2024-11-13 15:33:37.862 +07:00 [INF] HTTP GET /api/RabbitMQ/receive responded 200 in 523.5723 ms
+2024-11-13 15:33:37.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/api/RabbitMQ/receive - 200 null text/plain; charset=utf-8 549.437ms
+2024-11-13 15:33:38.992 +07:00 [WRN] Failed to authenticate user admin@gmail.com
+2024-11-13 15:33:39.012 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:33:39.079 +07:00 [INF] Response message to send: {"Message":"Invalid credentials"}
+2024-11-13 15:33:39.084 +07:00 [INF] Send successfully

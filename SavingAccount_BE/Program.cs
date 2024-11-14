@@ -68,8 +68,8 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
-builder.Services.AddSingleton<RabbitMqProducer>();
-builder.Services.AddSingleton<RabbitMQConsumer>();
+builder.Services.AddScoped<RabbitMqProducer>();
+builder.Services.AddScoped<RabbitMQConsumer>();
 builder.Services.AddTransient<IUserCard, UserCardService>();
 builder.Services.AddTransient<IUserHistory, UserHistory>();
 builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountService>();

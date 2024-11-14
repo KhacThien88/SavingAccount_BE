@@ -1,0 +1,30 @@
+2024-11-13 15:19:00.352 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
+2024-11-13 15:19:01.711 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:01.758 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiI3ZWU5NWE5Ni02NjlkLTRjZWMtYjJiOC1hMGQ1ZGNhOTYxNWQiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMTk0MSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.vKAtRZwIi_pelHGv6AHk_0bRmWF_cqvymLRL5o2faCnMv36kwc951TMhEWAVROnI7SEMhot-OX8h8w23SW7_fQ\u0022"}
+2024-11-13 15:19:01.768 +07:00 [INF] Send successfully
+2024-11-13 15:19:07.111 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
+2024-11-13 15:19:08.505 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:08.558 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiIxMTM0ODkyZS1lNDAxLTQ4ODktYThmNC05ZjhhMDdiZjc2MmMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMTk0OCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.5phyOj1KjTbfgzEU2KQIDv7GO2rKGiLNbTIzZjWWD_zlPSg__Ctrd0xqL40tP4qaYy1YcQOOA64npjY6uBPT_A\u0022"}
+2024-11-13 15:19:08.561 +07:00 [INF] Send successfully
+2024-11-13 15:19:21.581 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
+2024-11-13 15:19:22.915 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:22.967 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiIyOTE3ZGU5MS00MDBiLTQ3OTctYmZlNS01NzY0YmMwOWY3YmYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMTk2MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.CJuM9-D5N1K-IKbMq22CUz8F1lR2QIl6gWP9m43BIkDqw5F2MIQR_fN1rKe53SneVuO_n1Dqnrhl3vXX5ZV9YA\u0022"}
+2024-11-13 15:19:22.969 +07:00 [INF] Send successfully
+2024-11-13 15:19:27.150 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA"}
+2024-11-13 15:19:28.375 +07:00 [WRN] Failed to authenticate user admin@gmail.com
+2024-11-13 15:19:28.387 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:28.436 +07:00 [INF] Response message to send: {"Message":"Invalid credentials"}
+2024-11-13 15:19:28.440 +07:00 [INF] Send successfully
+2024-11-13 15:19:37.522 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA"}
+2024-11-13 15:19:38.640 +07:00 [WRN] Failed to authenticate user admin@gmail.com
+2024-11-13 15:19:38.648 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:38.696 +07:00 [INF] Response message to send: {"Message":"Invalid credentials"}
+2024-11-13 15:19:38.698 +07:00 [INF] Send successfully
+2024-11-13 15:19:42.978 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
+2024-11-13 15:19:44.288 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:44.335 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiJmZDM3YTBlMC1kZDJlLTQ1ZTctODViOS1iZTM4OTk1YmU5ZmYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMTk4NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.EBjOet8Co49HmkZgGtBCRIOQy2vjMPtb-xtSD1rKfIEmPztszEpUyD8ZlaMIbKiWtkybsOKXENQ268EW49mGSw\u0022"}
+2024-11-13 15:19:44.338 +07:00 [INF] Send successfully
+2024-11-13 15:19:46.469 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
+2024-11-13 15:19:47.930 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:19:47.975 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiJkOWQ2NTE3My1mYmQ5LTRkY2YtYjNiYS05Y2NjNGY3NzZjODYiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMTk4NywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.wRLzxgJA_1R3xsiqfE43BE9JGAQt614NDX5pce2Z6SOrgOCh89X7dk1Bclm1xaSYMQ-W8jD_yZ4EhOKPnF-APw\u0022"}
+2024-11-13 15:19:47.978 +07:00 [INF] Send successfully

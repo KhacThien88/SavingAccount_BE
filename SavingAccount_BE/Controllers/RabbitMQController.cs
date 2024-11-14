@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SavingAccount_BE.Model;
 using SavingAccount_BE.Service.RabbitMQ;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,7 +20,7 @@ namespace SavingAccount_BE.Controllers
         }
 
         [HttpPost("send")]
-        public async Task<IActionResult> SendMessage([FromBody] string message)
+        public async Task<IActionResult> SendMessage([FromBody] MessageSendModel message)
         {
             await _producer.SendMessageAsync(message);
             return Ok("Message sent successfully");

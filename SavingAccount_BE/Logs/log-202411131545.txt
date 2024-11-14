@@ -1,0 +1,4 @@
+2024-11-13 15:45:52.425 +07:00 [INF] Received login request: {"Email":"admin@gmail.com","Password":"111111aA@"}
+2024-11-13 15:45:53.897 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-13 15:45:53.946 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYTZiODljYS00NTRhLTQxYzctOWM1Yy04MTcyZmVhOGZkZjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiJmZjRmOGI3NS02OTA1LTQyZTQtYmVkYi0wNmU0ZTEzZTc1MDciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTc2MzAyMzU1MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIzMSIsImF1ZCI6IlVzZXIifQ.px_NK06QPzZ38tHjGjceySW7Vn2rC-7fCVzDZDF_ix8C97WKkjYpc4FWfEZrcwxRaxwQskZHeF1jF1W086VYXQ\u0022"}
+2024-11-13 15:45:53.966 +07:00 [INF] Send successfully

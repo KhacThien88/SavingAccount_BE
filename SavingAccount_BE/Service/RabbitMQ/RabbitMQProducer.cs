@@ -2,6 +2,7 @@
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using SavingAccount_BE.Model;
 
 namespace SavingAccount_BE.Service.RabbitMQ
 {
@@ -9,7 +10,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
     {
         private readonly ILogger<RabbitMqProducer> _logger;
         private readonly string _hostname = "localhost";
-        private readonly string _queueName = "example-queue";
+        private readonly string _queueName = "response-queue";
         private IConnection _connection;
 
         public RabbitMqProducer(ILogger<RabbitMqProducer> logger)
@@ -32,14 +33,14 @@ namespace SavingAccount_BE.Service.RabbitMQ
             }
         }
 
-        public async Task SendMessageAsync(string message)
+        public async Task SendMessageAsync(MessageSendModel message)
         {
             try
             {
                 using var channel = await _connection.CreateChannelAsync();
                 await channel.QueueDeclareAsync(queue: _queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
 
-                byte[] messageBodyBytes = System.Text.Encoding.UTF8.GetBytes(message);
+                byte[] messageBodyBytes = System.Text.Encoding.UTF8.GetBytes(message.Message);
                 var props = new BasicProperties
                 {
                     ContentType = "text/plain",
