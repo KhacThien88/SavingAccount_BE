@@ -1,0 +1,4 @@
+2024-11-16 10:24:56.946 +07:00 [INF] Received login request: {"FullName":"Vo THien","Email":"KTeightoptest1512@gmail.com","Password":"111111aA@","ConfirmPassword":"111111aA@","BirthDate":"2015-02-15T00:00:00","PhoneNumber":"0106516687","Province":"P","City":"C","Nation":"N","Address":"F"}
+2024-11-16 10:24:59.198 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-16 10:24:59.508 +07:00 [INF] Response message to send: {"Message":"{\u0022Message\u0022:\u0022Signup successful\u0022}"}
+2024-11-16 10:24:59.512 +07:00 [INF] Send successfully

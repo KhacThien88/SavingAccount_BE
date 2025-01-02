@@ -1,0 +1,8 @@
+2024-11-15 10:04:32.270 +07:00 [INF] Received login request: {"FullName":"Pham CHI THuan","Email":"thuan12345@gmail.com","Password":"Thuan@7771412","ConfirmPassword":"Thuan@7771412","BirthDate":"2024-11-06T00:00:00","PhoneNumber":"0943079414","Province":"Bac Lieu","City":"B\u1EA1c Li\u00EAu","Nation":"Viet Nam","Address":"Thi xa Gia Rai tinh Bac Lieu"}
+2024-11-15 10:04:33.597 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-15 10:04:33.768 +07:00 [INF] Response message to send: {"Message":"{\u0022Message\u0022:\u0022Signup successful\u0022}"}
+2024-11-15 10:04:33.778 +07:00 [INF] Send successfully
+2024-11-15 10:04:54.765 +07:00 [INF] Received login request: {"Email":"thuan12345@gmail.com","Password":"Thuan@7771412"}
+2024-11-15 10:04:56.068 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-15 10:04:56.235 +07:00 [INF] Response message to send: {"Message":"\u0022eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYjU2NmFjMi04OWM0LTQwYzEtOGM3Ni04MjAzNTYwMTIzM2MiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0aHVhbjEyMzQ1QGdtYWlsLmNvbSIsImp0aSI6IjEwNTgxY2EyLTE3YzQtNDhiMS05ZGI0LWI5NzNkOWU1MDNhNiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NjMxNzU4OTUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMzEiLCJhdWQiOiJVc2VyIn0.QT5vS_neP-Cm7YFziV9YQ2xdPBGOYgZGSEnNcAX2ByIzyVm9wshUCIR3PKH6es0XgYKbJ0ou8mlJTs2W6yVCMQ\u0022"}
+2024-11-15 10:04:56.240 +07:00 [INF] Send successfully

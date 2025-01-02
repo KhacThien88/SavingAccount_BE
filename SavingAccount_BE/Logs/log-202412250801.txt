@@ -1,0 +1,10 @@
+2024-12-25 08:01:31.633 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-12-25 08:01:31.955 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2024-12-25 08:01:31.958 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2024-12-25 08:01:32.028 +07:00 [DBG] The property 'User.UserIdUser' was created in shadow state because there are no eligible CLR members with a matching name.
+2024-12-25 08:01:32.109 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2024-12-25 08:01:32.115 +07:00 [DBG] Creating DbConnection.
+2024-12-25 08:01:32.158 +07:00 [DBG] Created DbConnection. (40ms).
+2024-12-25 08:01:32.162 +07:00 [DBG] Migrating using database 'SavingAccount' on server 'terraform-20241224051155033200000003.cpum2cwaojn4.ap-southeast-2.rds.amazonaws.com'.
+2024-12-25 08:01:32.171 +07:00 [DBG] Opening connection to database 'SavingAccount' on server 'terraform-20241224051155033200000003.cpum2cwaojn4.ap-southeast-2.rds.amazonaws.com'.
+2024-12-25 08:01:47.267 +07:00 [DBG] An error occurred using the connection to database 'SavingAccount' on server 'terraform-20241224051155033200000003.cpum2cwaojn4.ap-southeast-2.rds.amazonaws.com'.

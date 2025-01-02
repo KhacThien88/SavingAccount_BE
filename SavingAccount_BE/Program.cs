@@ -10,7 +10,7 @@ using SavingAccount_BE.Seeders;
 using SavingAccount_BE.Service.Accounts;
 using SavingAccount_BE.Service.Admin.AddUserCard;
 using SavingAccount_BE.Service.MailSender;
-using SavingAccount_BE.Service.RabbitMQ;
+// using SavingAccount_BE.Service.RabbitMQ;
 using SavingAccount_BE.Service.Users.Cards;
 using SavingAccount_BE.Service.Users.Deposits;
 using SavingAccount_BE.Service.Users.Histories;
@@ -68,8 +68,9 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
-builder.Services.AddScoped<RabbitMqProducer>();
-builder.Services.AddScoped<RabbitMQConsumer>();
+// builder.Services.AddScoped<RabbitMqProducer>();
+// builder.Services.AddScoped<RabbitMQConsumer>();
+// builder.Services.AddScoped<RabbitMQConsumerSignUp>();
 builder.Services.AddTransient<IUserCard, UserCardService>();
 builder.Services.AddTransient<IUserHistory, UserHistory>();
 builder.Services.AddTransient<IUserSavingAccountService, UserSavingAccountService>();
@@ -79,7 +80,9 @@ builder.Services.AddTransient<IAddUserCard, AddUserCard>();
 builder.Services.AddTransient<IDepositsAndWithdraws ,DepositsAndWithdraws>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
-
+// builder.Services.AddHostedService<RabbitMQHosted>();
+builder.Configuration["ConnectionStrings:UsersDatabase"] =
+    Environment.GetEnvironmentVariable("UsersDatabase") ?? builder.Configuration["ConnectionStrings:UsersDatabase"];
 builder.Services.AddDbContext<SavingAccountDbContext>(
     option =>
     {

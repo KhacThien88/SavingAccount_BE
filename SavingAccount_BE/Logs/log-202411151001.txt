@@ -1,0 +1,16 @@
+2024-11-15 10:01:01.678 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.RabbitMQController (SavingAccount_BE)
+2024-11-15 10:01:01.678 +07:00 [INF] Received login request: {"FullName":"Pham CHi THuan","Email":"thuan1234@gmail.com","Password":"1234","ConfirmPassword":"1234","BirthDate":"2005-06-16T00:00:00","PhoneNumber":"0945689431","Province":"Bac Lieu","City":"B\u1EA1c Li\u00EAu","Nation":"Viet Nam","Address":"Gi\u00E1 Rai, B\u1EA1c Li\u00EAu"}
+2024-11-15 10:01:01.867 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-11-15 10:01:01.872 +07:00 [DBG] No information found on request to perform content negotiation.
+2024-11-15 10:01:01.875 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-11-15 10:01:01.878 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-11-15 10:01:01.881 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-11-15 10:01:01.885 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-15 10:01:01.887 +07:00 [INF] Executed action SavingAccount_BE.Controllers.RabbitMQController.StartConsumingSignUp (SavingAccount_BE) in 2859.6199ms
+2024-11-15 10:01:01.890 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.RabbitMQController.StartConsumingSignUp (SavingAccount_BE)'
+2024-11-15 10:01:01.891 +07:00 [INF] HTTP GET /api/RabbitMQ/receiveSignUp responded 200 in 2907.9809 ms
+2024-11-15 10:01:01.893 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/api/RabbitMQ/receiveSignUp - 200 null text/plain; charset=utf-8 2933.6167ms
+2024-11-15 10:01:02.459 +07:00 [WRN] Failed to register user thuan1234@gmail.com
+2024-11-15 10:01:02.783 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
+2024-11-15 10:01:02.950 +07:00 [INF] Response message to send: {"Message":"Invalid credentials"}
+2024-11-15 10:01:02.951 +07:00 [INF] Send successfully
