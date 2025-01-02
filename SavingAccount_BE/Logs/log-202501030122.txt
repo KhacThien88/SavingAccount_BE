@@ -1,0 +1,69 @@
+2025-01-03 01:22:36.713 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-01-03 01:22:37.132 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-01-03 01:22:37.136 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2025-01-03 01:22:37.228 +07:00 [DBG] The property 'User.UserIdUser' was created in shadow state because there are no eligible CLR members with a matching name.
+2025-01-03 01:22:37.340 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-03 01:22:37.347 +07:00 [DBG] Creating DbConnection.
+2025-01-03 01:22:37.724 +07:00 [DBG] Created DbConnection. (375ms).
+2025-01-03 01:22:37.731 +07:00 [DBG] Migrating using database 'User' on server 'localhost'.
+2025-01-03 01:22:37.737 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.143 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.148 +07:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-01-03 01:22:38.153 +07:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (4ms).
+2025-01-03 01:22:38.156 +07:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (8ms).
+2025-01-03 01:22:38.161 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 01:22:38.175 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 01:22:38.179 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.184 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (3ms).
+2025-01-03 01:22:38.187 +07:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2025-01-03 01:22:38.188 +07:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2025-01-03 01:22:38.190 +07:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (2ms).
+2025-01-03 01:22:38.191 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.194 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.196 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 01:22:38.206 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 01:22:38.209 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.211 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-03 01:22:38.213 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.214 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.216 +07:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-01-03 01:22:38.217 +07:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2025-01-03 01:22:38.218 +07:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2025-01-03 01:22:38.219 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 01:22:38.222 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 01:22:38.223 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.224 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-03 01:22:38.226 +07:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2025-01-03 01:22:38.228 +07:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2025-01-03 01:22:38.229 +07:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (3ms).
+2025-01-03 01:22:38.231 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.239 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.240 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 01:22:38.243 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 01:22:38.250 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.251 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-03 01:22:38.262 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.266 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.268 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 01:22:38.269 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-03 01:22:38.271 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-03 01:22:38.273 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-03 01:22:38.289 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-03 01:22:38.298 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 01:22:38.303 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 7ms reading results.
+2025-01-03 01:22:38.305 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 01:22:38.308 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (3ms).

@@ -1,0 +1,80 @@
+2025-01-03 01:25:58.388 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7231/api/admin/AddCardUser - application/json 182
+2025-01-03 01:25:58.403 +07:00 [DBG] POST requests are not supported
+2025-01-03 01:25:58.407 +07:00 [DBG] The request has an origin header: 'https://localhost:7231'.
+2025-01-03 01:25:58.409 +07:00 [INF] CORS policy execution successful.
+2025-01-03 01:25:59.647 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-01-03 01:25:59.688 +07:00 [DBG] 1 candidate(s) found for the request path '/api/admin/AddCardUser'
+2025-01-03 01:25:59.691 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)' with route pattern 'api/admin/AddCardUser' is valid for the request path '/api/admin/AddCardUser'
+2025-01-03 01:25:59.698 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)'
+2025-01-03 01:25:59.702 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)'
+2025-01-03 01:25:59.731 +07:00 [INF] Route matched with {action = "AddCard", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddCard(SavingAccount_BE.Model.CardAddModel) on controller SavingAccount_BE.Controllers.AdminController (SavingAccount_BE).
+2025-01-03 01:25:59.738 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-01-03 01:25:59.742 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-01-03 01:25:59.747 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-01-03 01:25:59.751 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-01-03 01:25:59.754 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-01-03 01:25:59.758 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.AdminController (SavingAccount_BE)
+2025-01-03 01:25:59.762 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.AdminController (SavingAccount_BE)
+2025-01-03 01:25:59.782 +07:00 [DBG] Attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel' ...
+2025-01-03 01:25:59.789 +07:00 [DBG] Attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel' using the name '' in request data ...
+2025-01-03 01:25:59.793 +07:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-01-03 01:25:59.805 +07:00 [DBG] Connection id "0HN9BBAGPN0TV", Request id "0HN9BBAGPN0TV:00000009": started reading request body.
+2025-01-03 01:25:59.808 +07:00 [DBG] Connection id "0HN9BBAGPN0TV", Request id "0HN9BBAGPN0TV:00000009": done reading request body.
+2025-01-03 01:25:59.819 +07:00 [DBG] JSON input formatter succeeded, deserializing to type 'SavingAccount_BE.Model.CardAddModel'
+2025-01-03 01:25:59.823 +07:00 [DBG] Done attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel'.
+2025-01-03 01:25:59.826 +07:00 [DBG] Done attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel'.
+2025-01-03 01:25:59.831 +07:00 [DBG] Attempting to validate the bound parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel' ...
+2025-01-03 01:25:59.846 +07:00 [DBG] Done attempting to validate the bound parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel'.
+2025-01-03 01:25:59.856 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-03 01:25:59.863 +07:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(u => u.IdUser == __cam_idUser_0)'
+2025-01-03 01:25:59.877 +07:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.IdUser (string) Required PK FK AfterSave:Throw, 0], [Property: User.UserIdUser (no field, string) Shadow FK Index, 1] }
+        SELECT TOP(1) u.IdUser, u.UserIdUser
+        FROM User AS u
+        WHERE u.IdUser == @__cam_idUser_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    SavingAccount_BE.Data.SavingAccountDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2025-01-03 01:25:59.889 +07:00 [DBG] Creating DbConnection.
+2025-01-03 01:25:59.891 +07:00 [DBG] Created DbConnection. (2ms).
+2025-01-03 01:25:59.893 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 01:25:59.895 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 01:25:59.896 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 01:25:59.897 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-01-03 01:25:59.899 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2025-01-03 01:25:59.900 +07:00 [DBG] Executing DbCommand [Parameters=[@__cam_idUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[IdUser], [u].[UserIdUser]
+FROM [User] AS [u]
+WHERE [u].[IdUser] = @__cam_idUser_0
+2025-01-03 01:25:59.912 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[@__cam_idUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[IdUser], [u].[UserIdUser]
+FROM [User] AS [u]
+WHERE [u].[IdUser] = @__cam_idUser_0
+2025-01-03 01:25:59.917 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 01:25:59.921 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 3ms reading results.
+2025-01-03 01:25:59.924 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 01:25:59.927 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-03 01:25:59.933 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-01-03 01:25:59.942 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-01-03 01:25:59.944 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-01-03 01:25:59.946 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-01-03 01:25:59.948 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-01-03 01:25:59.954 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-03 01:25:59.964 +07:00 [INF] Executed action SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE) in 204.1166ms
+2025-01-03 01:25:59.966 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)'
+2025-01-03 01:25:59.971 +07:00 [ERR] HTTP POST /api/admin/AddCardUser responded 500 in 1553.6949 ms
+2025-01-03 01:25:59.977 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-03 01:25:59.982 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-03 01:25:59.986 +07:00 [DBG] Disposed connection to database '' on server '' (4ms).
+2025-01-03 01:25:59.991 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7231/api/admin/AddCardUser - 500 null text/plain; charset=utf-8 1603.5512ms

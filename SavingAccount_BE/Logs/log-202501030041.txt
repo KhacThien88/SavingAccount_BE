@@ -1,0 +1,349 @@
+2025-01-03 00:41:03.093 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-01-03 00:41:03.874 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-01-03 00:41:03.882 +07:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2025-01-03 00:41:04.073 +07:00 [DBG] The property 'User.UserIdUser' was created in shadow state because there are no eligible CLR members with a matching name.
+2025-01-03 00:41:04.231 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-03 00:41:04.243 +07:00 [DBG] Creating DbConnection.
+2025-01-03 00:41:04.294 +07:00 [DBG] Created DbConnection. (47ms).
+2025-01-03 00:41:04.299 +07:00 [DBG] Migrating using database 'User' on server 'localhost'.
+2025-01-03 00:41:04.306 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.601 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.615 +07:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-01-03 00:41:04.632 +07:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (14ms).
+2025-01-03 00:41:04.643 +07:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (30ms).
+2025-01-03 00:41:04.658 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 00:41:04.697 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 00:41:04.708 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.726 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (13ms).
+2025-01-03 00:41:04.734 +07:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2025-01-03 00:41:04.736 +07:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2025-01-03 00:41:04.742 +07:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (7ms).
+2025-01-03 00:41:04.748 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.755 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.762 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 00:41:04.790 +07:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 00:41:04.797 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.804 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (7ms).
+2025-01-03 00:41:04.815 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.818 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.822 +07:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2025-01-03 00:41:04.829 +07:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (6ms).
+2025-01-03 00:41:04.832 +07:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (9ms).
+2025-01-03 00:41:04.836 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 00:41:04.845 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-03 00:41:04.849 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.852 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-03 00:41:04.854 +07:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2025-01-03 00:41:04.856 +07:00 [DBG] Created DbCommand for 'ExecuteScalar' (1ms).
+2025-01-03 00:41:04.857 +07:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (3ms).
+2025-01-03 00:41:04.860 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.861 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.865 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 00:41:04.871 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-03 00:41:04.875 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.878 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-03 00:41:04.909 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.911 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.915 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 00:41:04.918 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-01-03 00:41:04.920 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-01-03 00:41:04.923 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-03 00:41:04.941 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-03 00:41:04.949 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 00:41:04.952 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 4ms reading results.
+2025-01-03 00:41:04.954 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.955 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-03 00:41:04.985 +07:00 [INF] No migrations were applied. The database is already up to date.
+2025-01-03 00:41:04.988 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-03 00:41:04.990 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:04.994 +07:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2025-01-03 00:41:05.018 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-03 00:41:05.112 +07:00 [DBG] Compiling query expression: 
+'DbSet<IdentityRole>()
+    .FirstOrDefault(r => r.NormalizedName == __normalizedName_0)'
+2025-01-03 00:41:05.505 +07:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+    asyncEnumerable: new SingleQueryingEnumerable<IdentityRole>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+            SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+            FROM AspNetRoles AS a
+            WHERE a.NormalizedName == @__normalizedName_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, IdentityRole>, 
+        SavingAccount_BE.Data.SavingAccountDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-01-03 00:41:05.577 +07:00 [DBG] Creating DbConnection.
+2025-01-03 00:41:05.580 +07:00 [DBG] Created DbConnection. (3ms).
+2025-01-03 00:41:05.586 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.594 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.597 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 00:41:05.598 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-03 00:41:05.605 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (8ms).
+2025-01-03 00:41:05.609 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-01-03 00:41:05.665 +07:00 [INF] Executed DbCommand (58ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-01-03 00:41:05.720 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-03 00:41:05.746 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 00:41:05.756 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 86ms reading results.
+2025-01-03 00:41:05.764 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.769 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (4ms).
+2025-01-03 00:41:05.784 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.790 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.794 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 00:41:05.799 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2025-01-03 00:41:05.806 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (12ms).
+2025-01-03 00:41:05.810 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-01-03 00:41:05.817 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-01-03 00:41:05.821 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-03 00:41:05.823 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 00:41:05.825 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 4ms reading results.
+2025-01-03 00:41:05.827 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.829 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-03 00:41:05.833 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-03 00:41:05.835 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:05.836 +07:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2025-01-03 00:41:05.866 +07:00 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-03 00:41:06.000 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-03 00:41:06.016 +07:00 [DBG] Creating DbConnection.
+2025-01-03 00:41:06.018 +07:00 [DBG] Created DbConnection. (1ms).
+2025-01-03 00:41:06.020 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.022 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.025 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 00:41:06.026 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-03 00:41:06.028 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2025-01-03 00:41:06.029 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-01-03 00:41:06.033 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-01-03 00:41:06.036 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-03 00:41:06.038 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 00:41:06.041 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 5ms reading results.
+2025-01-03 00:41:06.045 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.050 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (4ms).
+2025-01-03 00:41:06.062 +07:00 [DBG] Compiling query expression: 
+'DbSet<ApplicationUser>()
+    .SingleOrDefault(u => u.NormalizedEmail == __normalizedEmail_0)'
+2025-01-03 00:41:06.085 +07:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ApplicationUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<ApplicationUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.Address (string) Required, 2], [Property: ApplicationUser.Base64Image (string), 3], [Property: ApplicationUser.BirthDate (DateTime) Required, 4], [Property: ApplicationUser.City (string) Required, 5], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 6], [Property: ApplicationUser.Email (string) MaxLength(256), 7], [Property: ApplicationUser.EmailConfirmed (bool) Required, 8], [Property: ApplicationUser.FullName (string) Required, 9], [Property: ApplicationUser.LockoutEnabled (bool) Required, 10], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 11], [Property: ApplicationUser.Nation (string) Required, 12], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 13], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 14], [Property: ApplicationUser.PasswordHash (string), 15], [Property: ApplicationUser.PhoneNumber (string), 16], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 17], [Property: ApplicationUser.Province (string) Required, 18], [Property: ApplicationUser.SecurityStamp (string), 19], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 20], [Property: ApplicationUser.UserName (string) MaxLength(256), 21] }
+            SELECT TOP(2) a.Id, a.AccessFailedCount, a.Address, a.Base64Image, a.BirthDate, a.City, a.ConcurrencyStamp, a.Email, a.EmailConfirmed, a.FullName, a.LockoutEnabled, a.LockoutEnd, a.Nation, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.Province, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+            FROM AspNetUsers AS a
+            WHERE a.NormalizedEmail == @__normalizedEmail_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, ApplicationUser>, 
+        SavingAccount_BE.Data.SavingAccountDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-01-03 00:41:06.181 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.184 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.187 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 00:41:06.190 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (3ms).
+2025-01-03 00:41:06.218 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (30ms).
+2025-01-03 00:41:06.222 +07:00 [DBG] Executing DbCommand [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-03 00:41:06.246 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-01-03 00:41:06.286 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-03 00:41:06.353 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 00:41:06.355 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 102ms reading results.
+2025-01-03 00:41:06.358 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.360 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-03 00:41:06.365 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-03 00:41:06.369 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:06.371 +07:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2025-01-03 00:41:06.453 +07:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-01-03 00:41:06.557 +07:00 [DBG] Hosting starting
+2025-01-03 00:41:06.587 +07:00 [DBG] Reading data from file 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys\key-2b957df3-6753-4ee6-b989-c383549b460e.xml'.
+2025-01-03 00:41:06.596 +07:00 [DBG] Found key {2b957df3-6753-4ee6-b989-c383549b460e}.
+2025-01-03 00:41:06.608 +07:00 [DBG] Considering key {2b957df3-6753-4ee6-b989-c383549b460e} with expiration date 2025-01-23 17:03:43Z as default key.
+2025-01-03 00:41:06.613 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-01-03 00:41:06.615 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-01-03 00:41:06.618 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-01-03 00:41:06.622 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-01-03 00:41:06.625 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-01-03 00:41:06.627 +07:00 [DBG] Using key {2b957df3-6753-4ee6-b989-c383549b460e} as the default key.
+2025-01-03 00:41:06.629 +07:00 [DBG] Key ring with default key {2b957df3-6753-4ee6-b989-c383549b460e} was loaded during application startup.
+2025-01-03 00:41:06.835 +07:00 [INF] Now listening on: https://localhost:7231
+2025-01-03 00:41:06.839 +07:00 [INF] Now listening on: http://localhost:5136
+2025-01-03 00:41:06.846 +07:00 [DBG] Loaded hosting startup assembly SavingAccount_BE
+2025-01-03 00:41:06.851 +07:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-01-03 00:41:06.857 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-01-03 00:41:06.861 +07:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-01-03 00:41:06.922 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-03 00:41:06.927 +07:00 [INF] Hosting environment: Development
+2025-01-03 00:41:06.932 +07:00 [INF] Content root path: D:\SavingAccountBECon\SavingAccount_BE\SavingAccount_BE
+2025-01-03 00:41:06.939 +07:00 [DBG] Hosting started
+2025-01-03 00:41:07.175 +07:00 [DBG] Connection id "0HN9BAIHJ5SN2" accepted.
+2025-01-03 00:41:07.182 +07:00 [DBG] Connection id "0HN9BAIHJ5SN3" accepted.
+2025-01-03 00:41:07.184 +07:00 [DBG] Connection id "0HN9BAIHJ5SN3" started.
+2025-01-03 00:41:07.184 +07:00 [DBG] Connection id "0HN9BAIHJ5SN2" started.
+2025-01-03 00:41:07.199 +07:00 [DBG] Connection id "0HN9BAIHJ5SN2" received FIN.
+2025-01-03 00:41:07.200 +07:00 [DBG] Connection id "0HN9BAIHJ5SN3" received FIN.
+2025-01-03 00:41:07.220 +07:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-01-03 00:41:07.220 +07:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-01-03 00:41:07.257 +07:00 [DBG] Connection id "0HN9BAIHJ5SN2" stopped.
+2025-01-03 00:41:07.267 +07:00 [DBG] Connection id "0HN9BAIHJ5SN3" stopped.
+2025-01-03 00:41:07.274 +07:00 [DBG] Connection id "0HN9BAIHJ5SN3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-03 00:41:07.274 +07:00 [DBG] Connection id "0HN9BAIHJ5SN2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-03 00:41:07.426 +07:00 [DBG] Connection id "0HN9BAIHJ5SN4" accepted.
+2025-01-03 00:41:07.429 +07:00 [DBG] Connection id "0HN9BAIHJ5SN4" started.
+2025-01-03 00:41:07.485 +07:00 [DBG] Connection 0HN9BAIHJ5SN4 established using the following protocol: "Tls13"
+2025-01-03 00:41:07.562 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/swagger/index.html - null null
+2025-01-03 00:41:07.720 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-01-03 00:41:07.802 +07:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-01-03 00:41:07.807 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-01-03 00:41:07.833 +07:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-01-03 00:41:07.839 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-01-03 00:41:07.849 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/swagger/index.html - 200 null text/html;charset=utf-8 294.0259ms
+2025-01-03 00:41:08.056 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-03 00:41:08.056 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/_vs/browserLink - null null
+2025-01-03 00:41:08.070 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 14.0845ms
+2025-01-03 00:41:08.117 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.7415ms
+2025-01-03 00:41:09.253 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/swagger/v1/swagger.json - null null
+2025-01-03 00:41:09.415 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 162.6191ms
+2025-01-03 00:41:11.106 +07:00 [DBG] Connection id "0HN9BAIHJ5SN5" accepted.
+2025-01-03 00:41:11.110 +07:00 [DBG] Connection id "0HN9BAIHJ5SN5" started.
+2025-01-03 00:41:11.121 +07:00 [DBG] Connection 0HN9BAIHJ5SN5 established using the following protocol: "Tls13"
+2025-01-03 00:41:11.130 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7231/api/admin/AddCardUser - null null
+2025-01-03 00:41:11.142 +07:00 [DBG] OPTIONS requests are not supported
+2025-01-03 00:41:11.148 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-03 00:41:11.151 +07:00 [INF] CORS policy execution successful.
+2025-01-03 00:41:11.156 +07:00 [DBG] The request is a preflight request.
+2025-01-03 00:41:11.158 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7231/api/admin/AddCardUser - 204 null null 29.2126ms
+2025-01-03 00:41:11.161 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7231/api/admin/AddCardUser - application/json 137
+2025-01-03 00:41:11.173 +07:00 [DBG] POST requests are not supported
+2025-01-03 00:41:11.176 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-03 00:41:11.179 +07:00 [INF] CORS policy execution successful.
+2025-01-03 00:41:11.285 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-01-03 00:41:11.328 +07:00 [DBG] 1 candidate(s) found for the request path '/api/admin/AddCardUser'
+2025-01-03 00:41:11.331 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)' with route pattern 'api/admin/AddCardUser' is valid for the request path '/api/admin/AddCardUser'
+2025-01-03 00:41:11.335 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)'
+2025-01-03 00:41:11.339 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)'
+2025-01-03 00:41:11.374 +07:00 [INF] Route matched with {action = "AddCard", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddCard(SavingAccount_BE.Model.CardAddModel) on controller SavingAccount_BE.Controllers.AdminController (SavingAccount_BE).
+2025-01-03 00:41:11.382 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-01-03 00:41:11.385 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-01-03 00:41:11.388 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-01-03 00:41:11.393 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-01-03 00:41:11.397 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-01-03 00:41:11.402 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.AdminController (SavingAccount_BE)
+2025-01-03 00:41:11.406 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.AdminController (SavingAccount_BE)
+2025-01-03 00:41:11.429 +07:00 [DBG] Attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel' ...
+2025-01-03 00:41:11.436 +07:00 [DBG] Attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel' using the name '' in request data ...
+2025-01-03 00:41:11.441 +07:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-01-03 00:41:11.455 +07:00 [DBG] Connection id "0HN9BAIHJ5SN5", Request id "0HN9BAIHJ5SN5:00000003": started reading request body.
+2025-01-03 00:41:11.458 +07:00 [DBG] Connection id "0HN9BAIHJ5SN5", Request id "0HN9BAIHJ5SN5:00000003": done reading request body.
+2025-01-03 00:41:11.466 +07:00 [DBG] JSON input formatter succeeded, deserializing to type 'SavingAccount_BE.Model.CardAddModel'
+2025-01-03 00:41:11.468 +07:00 [DBG] Done attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel'.
+2025-01-03 00:41:11.471 +07:00 [DBG] Done attempting to bind parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel'.
+2025-01-03 00:41:11.472 +07:00 [DBG] Attempting to validate the bound parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel' ...
+2025-01-03 00:41:11.490 +07:00 [DBG] Done attempting to validate the bound parameter 'value' of type 'SavingAccount_BE.Model.CardAddModel'.
+2025-01-03 00:41:11.500 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-03 00:41:11.509 +07:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(u => u.IdUser == __cam_idUser_0)'
+2025-01-03 00:41:11.522 +07:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.IdUser (string) Required PK FK AfterSave:Throw, 0], [Property: User.UserIdUser (no field, string) Shadow FK Index, 1] }
+        SELECT TOP(1) u.IdUser, u.UserIdUser
+        FROM User AS u
+        WHERE u.IdUser == @__cam_idUser_0), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    SavingAccount_BE.Data.SavingAccountDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2025-01-03 00:41:11.530 +07:00 [DBG] Creating DbConnection.
+2025-01-03 00:41:11.532 +07:00 [DBG] Created DbConnection. (1ms).
+2025-01-03 00:41:11.534 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:11.537 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:11.540 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-03 00:41:11.541 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-03 00:41:11.543 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-03 00:41:11.546 +07:00 [DBG] Executing DbCommand [Parameters=[@__cam_idUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[IdUser], [u].[UserIdUser]
+FROM [User] AS [u]
+WHERE [u].[IdUser] = @__cam_idUser_0
+2025-01-03 00:41:11.559 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@__cam_idUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[IdUser], [u].[UserIdUser]
+FROM [User] AS [u]
+WHERE [u].[IdUser] = @__cam_idUser_0
+2025-01-03 00:41:11.564 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-03 00:41:11.568 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 3ms reading results.
+2025-01-03 00:41:11.572 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:11.577 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (4ms).
+2025-01-03 00:41:11.586 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-01-03 00:41:11.594 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-01-03 00:41:11.596 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-01-03 00:41:11.598 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-01-03 00:41:11.600 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-01-03 00:41:11.604 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-03 00:41:11.614 +07:00 [INF] Executed action SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE) in 209.6347ms
+2025-01-03 00:41:11.617 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.AdminController.AddCard (SavingAccount_BE)'
+2025-01-03 00:41:11.621 +07:00 [ERR] HTTP POST /api/admin/AddCardUser responded 500 in 435.0903 ms
+2025-01-03 00:41:11.627 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-03 00:41:11.633 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-03 00:41:11.636 +07:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2025-01-03 00:41:11.640 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7231/api/admin/AddCardUser - 500 null text/plain; charset=utf-8 478.4248ms

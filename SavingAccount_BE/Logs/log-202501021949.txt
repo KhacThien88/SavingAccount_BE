@@ -1,0 +1,530 @@
+2025-01-02 19:49:23.507 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7231/api/user/opening-SavingAccount - null null
+2025-01-02 19:49:23.517 +07:00 [DBG] OPTIONS requests are not supported
+2025-01-02 19:49:23.525 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-02 19:49:23.530 +07:00 [INF] CORS policy execution successful.
+2025-01-02 19:49:23.531 +07:00 [DBG] The request is a preflight request.
+2025-01-02 19:49:23.534 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7231/api/user/opening-SavingAccount - 204 null null 27.1693ms
+2025-01-02 19:49:23.540 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7231/api/user/opening-SavingAccount - application/json 277
+2025-01-02 19:49:23.553 +07:00 [DBG] POST requests are not supported
+2025-01-02 19:49:23.554 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-02 19:49:23.555 +07:00 [INF] CORS policy execution successful.
+2025-01-02 19:49:23.556 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-01-02 19:49:23.557 +07:00 [DBG] 1 candidate(s) found for the request path '/api/user/opening-SavingAccount'
+2025-01-02 19:49:23.559 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)' with route pattern 'api/user/opening-SavingAccount' is valid for the request path '/api/user/opening-SavingAccount'
+2025-01-02 19:49:23.561 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)'
+2025-01-02 19:49:23.562 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)'
+2025-01-02 19:49:23.564 +07:00 [INF] Route matched with {action = "openSavingAccount", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] openSavingAccount(SavingAccount_BE.Model.AddSavingAccountModel) on controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE).
+2025-01-02 19:49:23.566 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-01-02 19:49:23.568 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-01-02 19:49:23.570 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-01-02 19:49:23.571 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-01-02 19:49:23.573 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-01-02 19:49:23.575 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:23.576 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:23.579 +07:00 [DBG] Attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel' ...
+2025-01-02 19:49:23.581 +07:00 [DBG] Attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel' using the name '' in request data ...
+2025-01-02 19:49:23.583 +07:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-01-02 19:49:23.585 +07:00 [DBG] Connection id "0HN9B5C6JUDH9", Request id "0HN9B5C6JUDH9:0000001B": started reading request body.
+2025-01-02 19:49:23.587 +07:00 [DBG] Connection id "0HN9B5C6JUDH9", Request id "0HN9B5C6JUDH9:0000001B": done reading request body.
+2025-01-02 19:49:23.589 +07:00 [DBG] JSON input formatter succeeded, deserializing to type 'SavingAccount_BE.Model.AddSavingAccountModel'
+2025-01-02 19:49:23.590 +07:00 [DBG] Done attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel'.
+2025-01-02 19:49:23.592 +07:00 [DBG] Done attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel'.
+2025-01-02 19:49:23.594 +07:00 [DBG] Attempting to validate the bound parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel' ...
+2025-01-02 19:49:23.596 +07:00 [DBG] Done attempting to validate the bound parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel'.
+2025-01-02 19:49:23.599 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-02 19:49:23.602 +07:00 [DBG] Creating DbConnection.
+2025-01-02 19:49:23.603 +07:00 [DBG] Created DbConnection. (0ms).
+2025-01-02 19:49:23.604 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:23.606 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:23.608 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:23.609 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:23.611 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-02 19:49:23.613 +07:00 [DBG] Executing DbCommand [Parameters=[@__addSavingAccountModel_IdUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__addSavingAccountModel_IdUser_0
+2025-01-02 19:49:24.109 +07:00 [INF] Executed DbCommand (496ms) [Parameters=[@__addSavingAccountModel_IdUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__addSavingAccountModel_IdUser_0
+2025-01-02 19:49:24.112 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:24.114 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:24.116 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 3ms reading results.
+2025-01-02 19:49:24.118 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.119 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-02 19:49:24.256 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.260 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.267 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:24.279 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (11ms).
+2025-01-02 19:49:24.282 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (14ms).
+2025-01-02 19:49:24.285 +07:00 [DBG] Executing DbCommand [Parameters=[@__addSavingAccountModel_SavingAccountName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[IdSavingAccount], [s].[Balance], [s].[DateOpened], [s].[Deposits], [s].[NameOfSavingAccount], [s].[Term], [s].[Withdraw]
+FROM [SavingAccount] AS [s]
+WHERE [s].[NameOfSavingAccount] = @__addSavingAccountModel_SavingAccountName_0
+2025-01-02 19:49:24.322 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[@__addSavingAccountModel_SavingAccountName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[IdSavingAccount], [s].[Balance], [s].[DateOpened], [s].[Deposits], [s].[NameOfSavingAccount], [s].[Term], [s].[Withdraw]
+FROM [SavingAccount] AS [s]
+WHERE [s].[NameOfSavingAccount] = @__addSavingAccountModel_SavingAccountName_0
+2025-01-02 19:49:24.326 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:24.328 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 1ms reading results.
+2025-01-02 19:49:24.330 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.332 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-02 19:49:24.334 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.336 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.338 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:24.339 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:24.341 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-02 19:49:24.342 +07:00 [DBG] Executing DbCommand [Parameters=[@__addSavingAccountModel_IdCard_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] = @__addSavingAccountModel_IdCard_0
+2025-01-02 19:49:24.348 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__addSavingAccountModel_IdCard_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] = @__addSavingAccountModel_IdCard_0
+2025-01-02 19:49:24.352 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'Card' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:24.354 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:24.355 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 3ms reading results.
+2025-01-02 19:49:24.357 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.359 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-02 19:49:24.361 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-01-02 19:49:24.364 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-01-02 19:49:24.364 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-01-02 19:49:24.366 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-01-02 19:49:24.367 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-01-02 19:49:24.369 +07:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-01-02 19:49:24.372 +07:00 [INF] Executed action SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE) in 797.0472ms
+2025-01-02 19:49:24.373 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)'
+2025-01-02 19:49:24.375 +07:00 [ERR] HTTP POST /api/user/opening-SavingAccount responded 500 in 818.8802 ms
+2025-01-02 19:49:24.377 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-02 19:49:24.379 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:24.380 +07:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2025-01-02 19:49:24.382 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7231/api/user/opening-SavingAccount - 500 null text/plain; charset=utf-8 842.4185ms
+2025-01-02 19:49:37.349 +07:00 [DBG] Connection id "0HN9B5C6JUDH9" received FIN.
+2025-01-02 19:49:37.350 +07:00 [DBG] Connection id "0HN9B5C6JUDH9" is closed. The last processed stream ID was 27.
+2025-01-02 19:49:37.350 +07:00 [DBG] The connection queue processing loop for 0HN9B5C6JUDH9 completed.
+2025-01-02 19:49:37.352 +07:00 [DBG] Connection id "0HN9B5C6JUDH9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-02 19:49:37.359 +07:00 [DBG] Connection id "0HN9B5C6JUDH9" stopped.
+2025-01-02 19:49:50.470 +07:00 [DBG] Connection id "0HN9B5C6JUDHA" accepted.
+2025-01-02 19:49:50.474 +07:00 [DBG] Connection id "0HN9B5C6JUDHA" started.
+2025-01-02 19:49:50.498 +07:00 [DBG] Connection 0HN9B5C6JUDHA established using the following protocol: "Tls13"
+2025-01-02 19:49:50.504 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7231/api/user/opening-SavingAccount - null null
+2025-01-02 19:49:50.519 +07:00 [DBG] OPTIONS requests are not supported
+2025-01-02 19:49:50.520 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-02 19:49:50.522 +07:00 [INF] CORS policy execution successful.
+2025-01-02 19:49:50.524 +07:00 [DBG] The request is a preflight request.
+2025-01-02 19:49:50.532 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7231/api/user/opening-SavingAccount - 204 null null 29.029ms
+2025-01-02 19:49:50.539 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7231/api/user/opening-SavingAccount - application/json 277
+2025-01-02 19:49:50.548 +07:00 [DBG] POST requests are not supported
+2025-01-02 19:49:50.556 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-02 19:49:50.560 +07:00 [INF] CORS policy execution successful.
+2025-01-02 19:49:50.570 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-01-02 19:49:50.572 +07:00 [DBG] 1 candidate(s) found for the request path '/api/user/opening-SavingAccount'
+2025-01-02 19:49:50.574 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)' with route pattern 'api/user/opening-SavingAccount' is valid for the request path '/api/user/opening-SavingAccount'
+2025-01-02 19:49:50.578 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)'
+2025-01-02 19:49:50.580 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)'
+2025-01-02 19:49:50.584 +07:00 [INF] Route matched with {action = "openSavingAccount", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] openSavingAccount(SavingAccount_BE.Model.AddSavingAccountModel) on controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE).
+2025-01-02 19:49:50.592 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-01-02 19:49:50.594 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-01-02 19:49:50.597 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-01-02 19:49:50.604 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-01-02 19:49:50.607 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-01-02 19:49:50.609 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:50.612 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:50.614 +07:00 [DBG] Attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel' ...
+2025-01-02 19:49:50.617 +07:00 [DBG] Attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel' using the name '' in request data ...
+2025-01-02 19:49:50.619 +07:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-01-02 19:49:50.621 +07:00 [DBG] Connection id "0HN9B5C6JUDHA", Request id "0HN9B5C6JUDHA:00000003": started reading request body.
+2025-01-02 19:49:50.623 +07:00 [DBG] Connection id "0HN9B5C6JUDHA", Request id "0HN9B5C6JUDHA:00000003": done reading request body.
+2025-01-02 19:49:50.624 +07:00 [DBG] JSON input formatter succeeded, deserializing to type 'SavingAccount_BE.Model.AddSavingAccountModel'
+2025-01-02 19:49:50.626 +07:00 [DBG] Done attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel'.
+2025-01-02 19:49:50.628 +07:00 [DBG] Done attempting to bind parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel'.
+2025-01-02 19:49:50.629 +07:00 [DBG] Attempting to validate the bound parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel' ...
+2025-01-02 19:49:50.631 +07:00 [DBG] Done attempting to validate the bound parameter 'addSavingAccountModel' of type 'SavingAccount_BE.Model.AddSavingAccountModel'.
+2025-01-02 19:49:50.635 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-02 19:49:50.637 +07:00 [DBG] Creating DbConnection.
+2025-01-02 19:49:50.639 +07:00 [DBG] Created DbConnection. (1ms).
+2025-01-02 19:49:50.640 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:50.642 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:50.644 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:50.645 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:50.647 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2025-01-02 19:49:50.648 +07:00 [DBG] Executing DbCommand [Parameters=[@__addSavingAccountModel_IdUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__addSavingAccountModel_IdUser_0
+2025-01-02 19:49:50.704 +07:00 [INF] Executed DbCommand (55ms) [Parameters=[@__addSavingAccountModel_IdUser_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[Base64Image], [a].[BirthDate], [a].[City], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Nation], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[Province], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__addSavingAccountModel_IdUser_0
+2025-01-02 19:49:50.707 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:50.709 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:50.712 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 5ms reading results.
+2025-01-02 19:49:50.715 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:50.717 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-02 19:49:50.787 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:50.790 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:50.791 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:50.794 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-01-02 19:49:50.796 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-01-02 19:49:50.797 +07:00 [DBG] Executing DbCommand [Parameters=[@__addSavingAccountModel_SavingAccountName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[IdSavingAccount], [s].[Balance], [s].[DateOpened], [s].[Deposits], [s].[NameOfSavingAccount], [s].[Term], [s].[Withdraw]
+FROM [SavingAccount] AS [s]
+WHERE [s].[NameOfSavingAccount] = @__addSavingAccountModel_SavingAccountName_0
+2025-01-02 19:49:50.981 +07:00 [INF] Executed DbCommand (184ms) [Parameters=[@__addSavingAccountModel_SavingAccountName_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[IdSavingAccount], [s].[Balance], [s].[DateOpened], [s].[Deposits], [s].[NameOfSavingAccount], [s].[Term], [s].[Withdraw]
+FROM [SavingAccount] AS [s]
+WHERE [s].[NameOfSavingAccount] = @__addSavingAccountModel_SavingAccountName_0
+2025-01-02 19:49:50.987 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:50.990 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 2ms reading results.
+2025-01-02 19:49:50.994 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:50.996 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-02 19:49:51.022 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:51.025 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:51.027 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:51.029 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:51.031 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-02 19:49:51.033 +07:00 [DBG] Executing DbCommand [Parameters=[@__addSavingAccountModel_IdCard_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] = @__addSavingAccountModel_IdCard_0
+2025-01-02 19:49:51.514 +07:00 [INF] Executed DbCommand (481ms) [Parameters=[@__addSavingAccountModel_IdCard_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] = @__addSavingAccountModel_IdCard_0
+2025-01-02 19:49:51.593 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'Card' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.595 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:51.597 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 4ms reading results.
+2025-01-02 19:49:51.600 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:51.603 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (3ms).
+2025-01-02 19:49:51.614 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'History' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.623 +07:00 [DBG] 'SavingAccountDbContext' generated a temporary value for the property 'CardHistory.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.631 +07:00 [DBG] The navigation 'CardHistory.Card' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.636 +07:00 [DBG] The navigation 'CardHistory.History' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.642 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'CardHistory' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.657 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'SavingAccount' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.663 +07:00 [DBG] 'SavingAccountDbContext' generated a temporary value for the property 'UserSavingAccount.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.672 +07:00 [DBG] The navigation 'UserSavingAccount.SavingAccount' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.676 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'UserSavingAccount' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.679 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'History' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.683 +07:00 [DBG] 'SavingAccountDbContext' generated a temporary value for the property 'SavingAccountHistory.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.693 +07:00 [DBG] The navigation 'SavingAccountHistory.History' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.697 +07:00 [DBG] The navigation 'SavingAccountHistory.SavingAccount' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.700 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'SavingAccountHistory' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.706 +07:00 [DBG] SaveChanges starting for 'SavingAccountDbContext'.
+2025-01-02 19:49:51.710 +07:00 [DBG] DetectChanges starting for 'SavingAccountDbContext'.
+2025-01-02 19:49:51.726 +07:00 [DBG] The unchanged property 'Card.Balance' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-01-02 19:49:51.729 +07:00 [DBG] An entity of type 'Card' tracked by 'SavingAccountDbContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:51.737 +07:00 [DBG] DetectChanges completed for 'SavingAccountDbContext'.
+2025-01-02 19:49:51.768 +07:00 [DBG] Executing 7 update commands as a batch.
+2025-01-02 19:49:51.783 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:51.790 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:51.797 +07:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2025-01-02 19:49:51.799 +07:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2025-01-02 19:49:51.802 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:51.804 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2025-01-02 19:49:51.806 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-01-02 19:49:51.808 +07:00 [DBG] Executing DbCommand [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Double), @p2='?' (Size = 450), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 450), @p7='?' (DbType = Double), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (Size = 450), @p11='?' (DbType = Double), @p12='?' (DbType = DateTime2), @p13='?' (DbType = Double), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 450), @p17='?' (Size = 450), @p18='?' (Size = 450), @p19='?' (Size = 450), @p20='?' (Size = 450), @p21='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Card] SET [Balance] = @p0
+OUTPUT 1
+WHERE [IdCard] = @p1;
+INSERT INTO [History] ([IdHistory], [Change], [DateTransfer], [Note])
+VALUES (@p2, @p3, @p4, @p5),
+(@p6, @p7, @p8, @p9);
+INSERT INTO [SavingAccount] ([IdSavingAccount], [Balance], [DateOpened], [Deposits], [NameOfSavingAccount], [Term])
+OUTPUT INSERTED.[Withdraw]
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15);
+INSERT INTO [CardHistory] ([IdCard], [IdHistory])
+OUTPUT INSERTED.[Id]
+VALUES (@p16, @p17);
+INSERT INTO [SavingAccountHistory] ([IdHistory], [IdSavingAccount])
+OUTPUT INSERTED.[Id]
+VALUES (@p18, @p19);
+INSERT INTO [UserSavingAccount] ([IdSavingAccount], [IdUser])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21);
+2025-01-02 19:49:52.941 +07:00 [INF] Executed DbCommand (1,133ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (DbType = Double), @p2='?' (Size = 450), @p3='?' (DbType = Double), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 450), @p7='?' (DbType = Double), @p8='?' (DbType = DateTime2), @p9='?' (Size = 4000), @p10='?' (Size = 450), @p11='?' (DbType = Double), @p12='?' (DbType = DateTime2), @p13='?' (DbType = Double), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 450), @p17='?' (Size = 450), @p18='?' (Size = 450), @p19='?' (Size = 450), @p20='?' (Size = 450), @p21='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Card] SET [Balance] = @p0
+OUTPUT 1
+WHERE [IdCard] = @p1;
+INSERT INTO [History] ([IdHistory], [Change], [DateTransfer], [Note])
+VALUES (@p2, @p3, @p4, @p5),
+(@p6, @p7, @p8, @p9);
+INSERT INTO [SavingAccount] ([IdSavingAccount], [Balance], [DateOpened], [Deposits], [NameOfSavingAccount], [Term])
+OUTPUT INSERTED.[Withdraw]
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15);
+INSERT INTO [CardHistory] ([IdCard], [IdHistory])
+OUTPUT INSERTED.[Id]
+VALUES (@p16, @p17);
+INSERT INTO [SavingAccountHistory] ([IdHistory], [IdSavingAccount])
+OUTPUT INSERTED.[Id]
+VALUES (@p18, @p19);
+INSERT INTO [UserSavingAccount] ([IdSavingAccount], [IdUser])
+OUTPUT INSERTED.[Id]
+VALUES (@p20, @p21);
+2025-01-02 19:49:52.976 +07:00 [DBG] The foreign key property 'CardHistory.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-01-02 19:49:52.987 +07:00 [DBG] The foreign key property 'SavingAccountHistory.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-01-02 19:49:53.005 +07:00 [DBG] The foreign key property 'UserSavingAccount.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-01-02 19:49:53.015 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:53.048 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 90ms reading results.
+2025-01-02 19:49:53.066 +07:00 [DBG] Committing transaction.
+2025-01-02 19:49:53.082 +07:00 [DBG] Committed transaction.
+2025-01-02 19:49:53.090 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:53.096 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (5ms).
+2025-01-02 19:49:53.101 +07:00 [DBG] Disposing transaction.
+2025-01-02 19:49:53.108 +07:00 [DBG] An entity of type 'History' tracked by 'SavingAccountDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.121 +07:00 [DBG] An entity of type 'CardHistory' tracked by 'SavingAccountDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.131 +07:00 [DBG] An entity of type 'SavingAccount' tracked by 'SavingAccountDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.136 +07:00 [DBG] An entity of type 'UserSavingAccount' tracked by 'SavingAccountDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.142 +07:00 [DBG] An entity of type 'History' tracked by 'SavingAccountDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.145 +07:00 [DBG] An entity of type 'SavingAccountHistory' tracked by 'SavingAccountDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.149 +07:00 [DBG] An entity of type 'Card' tracked by 'SavingAccountDbContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:53.152 +07:00 [DBG] SaveChanges completed for 'SavingAccountDbContext' with 7 entities written to the database.
+2025-01-02 19:49:53.154 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-01-02 19:49:53.158 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-01-02 19:49:53.159 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-01-02 19:49:53.160 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-01-02 19:49:53.162 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2025-01-02 19:49:53.163 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-01-02 19:49:53.165 +07:00 [INF] Executed action SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE) in 2555.629ms
+2025-01-02 19:49:53.167 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.UsersController.openSavingAccount (SavingAccount_BE)'
+2025-01-02 19:49:53.168 +07:00 [INF] HTTP POST /api/user/opening-SavingAccount responded 200 in 2598.7506 ms
+2025-01-02 19:49:53.170 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-02 19:49:53.172 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:53.173 +07:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2025-01-02 19:49:53.175 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7231/api/user/opening-SavingAccount - 200 null text/plain; charset=utf-8 2639.3752ms
+2025-01-02 19:49:55.487 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/api/user/Wallet?userId=c3756588-ae27-4eba-a403-082235abef6f - null null
+2025-01-02 19:49:55.490 +07:00 [DBG] The request path  does not match the path filter
+2025-01-02 19:49:55.492 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-02 19:49:55.494 +07:00 [INF] CORS policy execution successful.
+2025-01-02 19:49:55.496 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-01-02 19:49:55.498 +07:00 [DBG] 1 candidate(s) found for the request path '/api/user/Wallet'
+2025-01-02 19:49:55.500 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)' with route pattern 'api/user/Wallet' is valid for the request path '/api/user/Wallet'
+2025-01-02 19:49:55.502 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)'
+2025-01-02 19:49:55.503 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)'
+2025-01-02 19:49:55.504 +07:00 [INF] Route matched with {action = "GetListCards", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetListCards(System.String) on controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE).
+2025-01-02 19:49:55.507 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-01-02 19:49:55.508 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-01-02 19:49:55.510 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-01-02 19:49:55.513 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-01-02 19:49:55.515 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-01-02 19:49:55.517 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:55.520 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:55.522 +07:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-01-02 19:49:55.523 +07:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-01-02 19:49:55.525 +07:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-01-02 19:49:55.527 +07:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-01-02 19:49:55.529 +07:00 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-01-02 19:49:55.530 +07:00 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-01-02 19:49:55.534 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-02 19:49:55.538 +07:00 [DBG] Creating DbConnection.
+2025-01-02 19:49:55.540 +07:00 [DBG] Created DbConnection. (1ms).
+2025-01-02 19:49:55.542 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.543 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.545 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:55.546 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:55.548 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-02 19:49:55.552 +07:00 [DBG] Executing DbCommand [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserCard] AS [u]
+        WHERE [u].[IdUser] IN (
+            SELECT [u0].[IdUser]
+            FROM [User] AS [u0]
+            WHERE [u0].[IdUser] = @__userId_0
+        )) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-02 19:49:55.773 +07:00 [INF] Executed DbCommand (221ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserCard] AS [u]
+        WHERE [u].[IdUser] IN (
+            SELECT [u0].[IdUser]
+            FROM [User] AS [u0]
+            WHERE [u0].[IdUser] = @__userId_0
+        )) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-02 19:49:55.775 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:55.777 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 1ms reading results.
+2025-01-02 19:49:55.779 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.782 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-02 19:49:55.784 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.786 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.787 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:55.788 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:55.790 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2025-01-02 19:49:55.791 +07:00 [DBG] Executing DbCommand [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [u].[IdCard]
+FROM [UserCard] AS [u]
+WHERE [u].[IdUser] = @__userId_0
+2025-01-02 19:49:55.883 +07:00 [INF] Executed DbCommand (92ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [u].[IdCard]
+FROM [UserCard] AS [u]
+WHERE [u].[IdUser] = @__userId_0
+2025-01-02 19:49:55.886 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:55.888 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 2ms reading results.
+2025-01-02 19:49:55.891 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.893 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-02 19:49:55.894 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.896 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.898 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:55.899 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:55.901 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-02 19:49:55.902 +07:00 [DBG] Executing DbCommand [Parameters=[@__cardIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] IN (
+    SELECT [c0].[value]
+    FROM OPENJSON(@__cardIds_0) WITH ([value] nvarchar(450) '$') AS [c0]
+)
+2025-01-02 19:49:55.915 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@__cardIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] IN (
+    SELECT [c0].[value]
+    FROM OPENJSON(@__cardIds_0) WITH ([value] nvarchar(450) '$') AS [c0]
+)
+2025-01-02 19:49:55.921 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'Card' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:55.923 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'Card' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:55.926 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:55.929 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 8ms reading results.
+2025-01-02 19:49:55.931 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.933 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (1ms).
+2025-01-02 19:49:55.935 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-01-02 19:49:55.938 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-01-02 19:49:55.939 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-01-02 19:49:55.940 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-01-02 19:49:55.940 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-01-02 19:49:55.942 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SavingAccount_BE.Model.Card, SavingAccount_BE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-02 19:49:55.944 +07:00 [INF] Executed action SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE) in 426.7323ms
+2025-01-02 19:49:55.945 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7231/api/user/Wallet?userId=c3756588-ae27-4eba-a403-082235abef6f - null null
+2025-01-02 19:49:55.946 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)'
+2025-01-02 19:49:55.948 +07:00 [DBG] The request path  does not match the path filter
+2025-01-02 19:49:55.950 +07:00 [INF] HTTP GET /api/user/Wallet responded 200 in 453.5331 ms
+2025-01-02 19:49:55.954 +07:00 [DBG] The request has an origin header: 'http://localhost:3334'.
+2025-01-02 19:49:55.956 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-02 19:49:55.958 +07:00 [INF] CORS policy execution successful.
+2025-01-02 19:49:55.959 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:55.960 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-01-02 19:49:55.961 +07:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2025-01-02 19:49:55.962 +07:00 [DBG] 1 candidate(s) found for the request path '/api/user/Wallet'
+2025-01-02 19:49:55.964 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/api/user/Wallet?userId=c3756588-ae27-4eba-a403-082235abef6f - 200 null application/json; charset=utf-8 477.3362ms
+2025-01-02 19:49:55.965 +07:00 [DBG] Endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)' with route pattern 'api/user/Wallet' is valid for the request path '/api/user/Wallet'
+2025-01-02 19:49:55.973 +07:00 [DBG] Request matched endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)'
+2025-01-02 19:49:55.974 +07:00 [INF] Executing endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)'
+2025-01-02 19:49:55.977 +07:00 [INF] Route matched with {action = "GetListCards", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetListCards(System.String) on controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE).
+2025-01-02 19:49:55.983 +07:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-01-02 19:49:55.985 +07:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-01-02 19:49:55.988 +07:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-01-02 19:49:55.991 +07:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-01-02 19:49:55.994 +07:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-01-02 19:49:55.998 +07:00 [DBG] Executing controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:56.000 +07:00 [DBG] Executed controller factory for controller SavingAccount_BE.Controllers.UsersController (SavingAccount_BE)
+2025-01-02 19:49:56.002 +07:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-01-02 19:49:56.004 +07:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-01-02 19:49:56.006 +07:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-01-02 19:49:56.008 +07:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-01-02 19:49:56.010 +07:00 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-01-02 19:49:56.012 +07:00 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-01-02 19:49:56.015 +07:00 [DBG] Entity Framework Core 8.0.10 initialized 'SavingAccountDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.10' with options: None
+2025-01-02 19:49:56.019 +07:00 [DBG] Creating DbConnection.
+2025-01-02 19:49:56.022 +07:00 [DBG] Created DbConnection. (3ms).
+2025-01-02 19:49:56.024 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.026 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.028 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:56.030 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:56.032 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2025-01-02 19:49:56.034 +07:00 [DBG] Executing DbCommand [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserCard] AS [u]
+        WHERE [u].[IdUser] IN (
+            SELECT [u0].[IdUser]
+            FROM [User] AS [u0]
+            WHERE [u0].[IdUser] = @__userId_0
+        )) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-02 19:49:56.043 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [UserCard] AS [u]
+        WHERE [u].[IdUser] IN (
+            SELECT [u0].[IdUser]
+            FROM [User] AS [u0]
+            WHERE [u0].[IdUser] = @__userId_0
+        )) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-02 19:49:56.046 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:56.048 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 2ms reading results.
+2025-01-02 19:49:56.054 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.056 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-02 19:49:56.059 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.061 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.063 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:56.065 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:56.069 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (4ms).
+2025-01-02 19:49:56.072 +07:00 [DBG] Executing DbCommand [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [u].[IdCard]
+FROM [UserCard] AS [u]
+WHERE [u].[IdUser] = @__userId_0
+2025-01-02 19:49:56.143 +07:00 [INF] Executed DbCommand (71ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [u].[IdCard]
+FROM [UserCard] AS [u]
+WHERE [u].[IdUser] = @__userId_0
+2025-01-02 19:49:56.148 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:56.150 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 1ms reading results.
+2025-01-02 19:49:56.152 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.155 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-02 19:49:56.157 +07:00 [DBG] Opening connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.159 +07:00 [DBG] Opened connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.160 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-01-02 19:49:56.161 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2025-01-02 19:49:56.163 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2025-01-02 19:49:56.164 +07:00 [DBG] Executing DbCommand [Parameters=[@__cardIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] IN (
+    SELECT [c0].[value]
+    FROM OPENJSON(@__cardIds_0) WITH ([value] nvarchar(450) '$') AS [c0]
+)
+2025-01-02 19:49:56.179 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__cardIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[IdCard], [c].[Balance], [c].[Base64Image], [c].[CardNumber], [c].[DateOpened], [c].[NameOfCard], [c].[TypeCard]
+FROM [Card] AS [c]
+WHERE [c].[IdCard] IN (
+    SELECT [c0].[value]
+    FROM OPENJSON(@__cardIds_0) WITH ([value] nvarchar(450) '$') AS [c0]
+)
+2025-01-02 19:49:56.182 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'Card' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:56.183 +07:00 [DBG] Context 'SavingAccountDbContext' started tracking 'Card' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-01-02 19:49:56.186 +07:00 [DBG] Closing data reader to 'User' on server 'localhost'.
+2025-01-02 19:49:56.188 +07:00 [DBG] A data reader for 'User' on server 'localhost' is being disposed after spending 6ms reading results.
+2025-01-02 19:49:56.191 +07:00 [DBG] Closing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.194 +07:00 [DBG] Closed connection to database 'User' on server 'localhost' (2ms).
+2025-01-02 19:49:56.197 +07:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-01-02 19:49:56.200 +07:00 [DBG] No information found on request to perform content negotiation.
+2025-01-02 19:49:56.201 +07:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-01-02 19:49:56.202 +07:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-01-02 19:49:56.204 +07:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-01-02 19:49:56.205 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SavingAccount_BE.Model.Card, SavingAccount_BE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-02 19:49:56.207 +07:00 [INF] Executed action SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE) in 209.3857ms
+2025-01-02 19:49:56.209 +07:00 [INF] Executed endpoint 'SavingAccount_BE.Controllers.UsersController.GetListCards (SavingAccount_BE)'
+2025-01-02 19:49:56.210 +07:00 [INF] HTTP GET /api/user/Wallet responded 200 in 250.4809 ms
+2025-01-02 19:49:56.212 +07:00 [DBG] 'SavingAccountDbContext' disposed.
+2025-01-02 19:49:56.213 +07:00 [DBG] Disposing connection to database 'User' on server 'localhost'.
+2025-01-02 19:49:56.215 +07:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2025-01-02 19:49:56.217 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7231/api/user/Wallet?userId=c3756588-ae27-4eba-a403-082235abef6f - 200 null application/json; charset=utf-8 271.3763ms
+2025-01-02 19:49:57.382 +07:00 [DBG] Connection id "0HN9B5C6JUDHA" received FIN.
+2025-01-02 19:49:57.738 +07:00 [DBG] Connection id "0HN9B5C6JUDHA" is closed. The last processed stream ID was 7.
+2025-01-02 19:49:57.738 +07:00 [DBG] The connection queue processing loop for 0HN9B5C6JUDHA completed.
+2025-01-02 19:49:57.743 +07:00 [DBG] Connection id "0HN9B5C6JUDHA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-01-02 19:49:57.752 +07:00 [DBG] Connection id "0HN9B5C6JUDHA" stopped.
