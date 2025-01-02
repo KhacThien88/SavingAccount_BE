@@ -12,13 +12,11 @@ namespace SavingAccount_BE.Controllers
     {
         private readonly RabbitMqProducer _producer;
         private readonly RabbitMQConsumer _consumer;
-        private readonly RabbitMQConsumerSignUp _signUp;
 
-        public RabbitMQController(RabbitMqProducer producer, RabbitMQConsumer consumer , RabbitMQConsumerSignUp rabbitMQConsumerSignUp)
+        public RabbitMQController(RabbitMqProducer producer, RabbitMQConsumer consumer)
         {
             _producer = producer;
             _consumer = consumer;
-            _signUp = rabbitMQConsumerSignUp;
         }
 
         [HttpPost("send")]
@@ -32,12 +30,6 @@ namespace SavingAccount_BE.Controllers
         public async Task<IActionResult> StartConsuming()
         {
             await _consumer.StartConsuming();
-            return Ok("Consumer started successfully");
-        }
-        [HttpGet("receiveSignUp")]
-        public async Task<IActionResult> StartConsumingSignUp()
-        {
-            await _signUp.StartConsuming();
             return Ok("Consumer started successfully");
         }
     }

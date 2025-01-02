@@ -1,5 +1,0 @@
-2024-11-16 10:27:23.401 +07:00 [INF] Received login request: {"Email":"test@gmail.com","Password":"123456"}
-2024-11-16 10:27:25.220 +07:00 [WRN] Failed to authenticate user test@gmail.com
-2024-11-16 10:27:25.629 +07:00 [INF] Message Sent: SavingAccount_BE.Model.MessageSendModel
-2024-11-16 10:27:26.060 +07:00 [INF] Response message to send: {"Message":"Invalid credentials"}
-2024-11-16 10:27:26.061 +07:00 [INF] Send successfully

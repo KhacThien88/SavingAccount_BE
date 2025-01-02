@@ -25,7 +25,7 @@ namespace SavingAccount_BE.Controllers
             if (result.Succeeded)
             {
 
-                return Ok(new { Message = "Signup successful" });
+                return Ok("Signup successful");
             }
 
             return BadRequest(result.Errors);

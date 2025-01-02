@@ -16,7 +16,7 @@ namespace SavingAccount_BE.Service.RabbitMQ
         private readonly IAccountService _accountService;
         private readonly ILogger<RabbitMQConsumer> _logger;
         private readonly string _hostname = "3.107.206.208";
-        private readonly string _queueName = "login-queue";
+        private readonly string _queueName = "example-queue";
         private IConnection _connection;
         private IChannel _channel;
 
